@@ -1,0 +1,128 @@
+
+.divFormGeral {
+  display: flex;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.divLateral {
+  background: #D3D2E2;
+  width: 350px;
+  padding: 40px 32px;
+  border-top-right-radius: 40px;
+  border-right: 2px solid #D3D2E2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.divConteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 40px 48px 0 48px;
+}
+
+.formAjuda {
+  max-width: 700px;
+  margin-bottom: 0;
+}
+
+.linhaInputs {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 18px;
+}
+
+.linhaInputs > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.formAjuda label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.formAjuda input[type="text"],
+.formAjuda input[type="email"] {
+  padding: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #fafbfc;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.checkboxGrupo {
+  margin-top: 24px;
+}
+
+.checkboxColunas {
+  display: flex;
+  gap: 48px;
+}
+
+.checkboxColunas > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ilustracaoDireita {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  max-width: 40vw;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.divFormBto {
+  display: flex;
+  gap: 40px;
+  position: absolute;
+  top: 24px;
+  right: 48px;
+  margin-bottom: 0; 
+  z-index: 2;
+}
+
+.divBto {
+  background: white;
+  border: none;
+  color: #222;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0 12px;
+  box-shadow: none;
+  outline: none;
+  transition: color 0.2s;
+}
+
+
+/* Botão Enviar estilizado para combinar com o layout */
+.botaoEnviar {
+  margin-top: 24px;
+  padding: 12px 36px;
+  background: #3498f3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(52, 152, 243, 0.08);
+  transition: background 0.2s, transform 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.botaoEnviar:hover,
+.botaoEnviar:focus {
+  background: #2176bd;
+  transform: translateY(-2px) scale(1.03);
+}
