@@ -1,0 +1,69 @@
+/* Tela de Tipos de Abuso*/
+
+
+.tiposAbusos{
+  height: 100dvh;
+  background-color: #F1C5A1;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+.containerAbs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  
+  & span {
+      font-size: 60px;
+      font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  & p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+  }
+}
+
+.containerBtoAbs{
+  padding-top: 50px;
+}
+
+.btoSaibaMaisAbs{
+  background: #FE7200;
+  color: white;
+  font-weight: bold;
+  border: #FE7200 1px solid;
+  border-radius: 50px;
+  padding: 30px 80px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.topicoBto{
+  background: #FE7200;
+  color: white;
+  font-weight: bold;
+  border: #FE7200 1px solid;
+  border-radius: 50px;
+  height: 50px;
+  width: 500px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+
+.containerTopicosAbs{
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+

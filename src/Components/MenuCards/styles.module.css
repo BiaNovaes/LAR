@@ -1,0 +1,82 @@
+/* MENU CARDS */
+
+.menuCards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+  background-image: url(../../assets/imagens/vector.png);
+  background-size: cover;
+  height: 110dvh;
+  gap: 20px;
+  position: relative;
+}
+
+.menuCards > h1{
+  display: flex;
+  margin-top: 200px ;
+}
+
+.containerCards {
+  display: grid;        
+  grid-template-columns: 1fr 1fr 1fr; 
+  margin: 0px 450px; 
+  cursor: pointer;            
+}
+
+.card { 
+  padding: 10px;     
+  background-color: #f0f0f0; 
+  border: 1px solid #ccc; 
+  border-radius: 20px;  
+  margin: 20px;          
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+
+}
+
+.card > h3{
+  margin: 0px 15px 0px 30px;
+}
+
+.card > p{
+  font-weight: lighter;
+  font-family: serif;
+  padding: 10px;
+}
+
+.meusCardsContainer{
+  position: absolute;
+  padding: 50px 60px;   
+  max-width: 50%;  
+  background-color: #f0f0f0; 
+  border: 4px solid #050000; 
+  border-radius: 20px;  
+  margin: 20px;          
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.voltarCards{
+  position: absolute;
+  cursor: pointer;
+  padding:  10px;
+}
+
+.tituloModal > h1{
+  text-align: center;
+  padding-bottom:  50px;
+  font-size: 60px;
+
+}
+
+.topicosModal > h3{
+  padding: 20px 0px;
+}
+
+.topicosModal {
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

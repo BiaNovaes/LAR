@@ -63,7 +63,7 @@ function FormAjuda() {
         <Link to={"/formqueroajuda"} className={style.divBto}>
           Preciso de ajuda
         </Link>
-        <Link to={"#"} className={style.divBto}>
+        <Link to={"/login"} className={style.divBto}>
           Login
         </Link>
       </div>

@@ -1,0 +1,44 @@
+/*Rodapé da Home*/
+
+.rodapeHome{
+  display: flex;
+  height: 50dvh;
+  background-image: url(../../assets/imagens/rodapeHome.png);
+  background-size: cover;
+}
+
+.redesRodape{
+  height: 100px;
+  margin: 150px 0px 0px 250px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.redesRodape > span{
+   text-decoration: underline;
+}
+
+.redesSociais{
+   text-decoration: underline;
+}
+.redesSociais > img{
+  width: 35px;
+  height: 35px;
+}
+
+
+.criadoLar{
+  display: flex;
+  flex-direction: row;
+
+}
+.criadoLar > h1{
+  font-size: 25px;
+  font-style: italic;
+}
+.criadoLar > p{
+  font-size: 15px;
+  font-weight: lighter;
+    margin: 8px 0px 0px 15px;
+}

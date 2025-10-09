@@ -1,0 +1,51 @@
+import {  useNavigate} from 'react-router-dom';
+import logo from '../../assets/imagens/image1.png'
+import style from './styles.module.css'
+
+
+function CabecalhoHome () {
+
+const navigate = useNavigate();
+    
+function handleNavegarLogin(){
+        navigate('/login')
+    }
+function handleNavegarHome(){
+        navigate('/')
+    }
+function handleNavegarInstituicao(){
+    navigate('/instituicao')
+}
+function handleNavegarInstituicaoAjuda(){
+    navigate('/formqueroajuda')
+}
+function handleNavegarPrecisoAjuda(){
+    navigate('/preciso-ajuda')
+}
+function handleNavegarSos(){
+    navigate('/Sos')
+}
+    return (
+        <div>
+         <div className={style.cabecalhoHome}>
+            <div className={style.Logo}>
+                <img src={logo} alt="Logo" />
+            </div>
+            
+           <div>
+                <button className={style.bto} onClick={handleNavegarHome}>Home</button>
+                <button className={style.bto}  onClick={handleNavegarInstituicao}>Instituição</button>
+                <button className={style.bto}  onClick={handleNavegarInstituicaoAjuda}>Quero Ajudar</button>
+                <button className={style.bto}  onClick={handleNavegarPrecisoAjuda}>Preciso de Ajuda</button>
+                <button className={style.bto}  onClick={handleNavegarLogin}>Entrar</button>
+                
+           </div>
+
+                 <button className={style.btoSOS}  onClick={handleNavegarSos}>S.O.S</button>
+                
+            </div>
+        </div>
+    )
+}
+
+export default CabecalhoHome
