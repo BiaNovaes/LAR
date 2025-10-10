@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import style from './styles.module.css'
 
 
 function TiposAbusos(){
+
    return (
         <div className={style.tiposAbusos}>
             <div className={style.containerAbs}>

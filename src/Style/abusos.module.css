@@ -1,13 +1,13 @@
-* {
+/* .TiposDeAbusoContainer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 
 html, body {
     min-height: 100%;
-    overflow-y: auto; /* É para rolagem da página */
+     overflow-y: auto; /*É para rolagem da página */
 }
 
 /* PÁGINA INICIAL */

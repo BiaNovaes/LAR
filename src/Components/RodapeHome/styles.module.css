@@ -22,9 +22,11 @@
 .redesSociais{
    text-decoration: underline;
 }
-.redesSociais > img{
-  width: 35px;
+.redesSociais {
+ & img{ width: 35px;
   height: 35px;
+}
+
 }
 
 
@@ -40,5 +42,5 @@
 .criadoLar > p{
   font-size: 15px;
   font-weight: lighter;
-    margin: 8px 0px 0px 15px;
+  margin: 8px 0px 0px 15px;
 }

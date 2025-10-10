@@ -1,7 +1,14 @@
+import { useNavigate } from 'react-router-dom';
 import style from './styles.module.css'
 
 
 function HomeInicio(){
+
+    const navigate = useNavigate();
+
+    function handleNavegarPrecisoAjuda(){
+    navigate('/preciso-ajuda') }
+
     return (
         <div className={style.homeInicio}>
             <div className={style.textoHome}>
@@ -11,7 +18,7 @@ function HomeInicio(){
                 </h1>
                 <span>Estamos aqui para te apoiar.</span>
 
-            <button className={style.btoAjuda}>Preciso de Ajuda</button>
+            <button onClick={handleNavegarPrecisoAjuda} className={style.btoAjuda}>Preciso de Ajuda</button>
             </div>
         </div>
     )

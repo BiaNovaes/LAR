@@ -37,7 +37,7 @@ function handleNavegarSos(){
                 <button className={style.bto}  onClick={handleNavegarInstituicao}>Instituição</button>
                 <button className={style.bto}  onClick={handleNavegarInstituicaoAjuda}>Quero Ajudar</button>
                 <button className={style.bto}  onClick={handleNavegarPrecisoAjuda}>Preciso de Ajuda</button>
-                <button className={style.bto}  onClick={handleNavegarLogin}>Entrar</button>
+                <button className={style.bto}  onClick={handleNavegarLogin}>Login</button>
                 
            </div>
 

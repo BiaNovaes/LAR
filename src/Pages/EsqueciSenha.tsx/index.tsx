@@ -3,7 +3,7 @@ import forget_password from "../../Assets/imagens/bg-forget-password.png";
 import { useForm } from "react-hook-form";
 import z from "zod/v3";
 import { zodResolver } from "@hookform/resolvers/zod";
-// import Cabecalho from "../../Components/Cabecalho";
+import Cabecalho from "../../Components/Cabecalho";
 import { Link } from "react-router-dom";
 
 const schema = z.object({
@@ -33,7 +33,7 @@ export default function EsqueciSenha() {
 
   return (
     <main className={S.container}>
-      {/* <Cabecalho /> */}
+      <Cabecalho />
       <div className={S.containerForm}>
         <form onSubmit={handleSubmitEmail(onSubmitEmail)} className={S.form}>
           <div className={S.containerTitle}>

@@ -20,7 +20,7 @@ import Cabecalho from '../../Components/Cabecalho';
 
 function TiposDeAbuso() {
   return (
-    <div>
+    <div className={style.TiposDeAbusoContainer}>
         <Cabecalho/>
       <header className={style.hero}>
 

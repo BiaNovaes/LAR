@@ -3,12 +3,16 @@ import facebook from '../../assets/imagens/facebook.png'
 import instagram from '../../assets/imagens/Instagram.png'
 
 function RodapeHome() {
+
     return (
         <div>
             <footer className={style.rodapeHome}>
 
                 <div className={style.redesRodape}>
-                    <span className={style.redesSociais}>ACOMPANHE O LAR NAS REDES SOCIAIS:  <img src={facebook} alt="facebook" /> <img src={instagram} alt="instagram" /></span>
+                    <span className={style.redesSociais}>ACOMPANHE O LAR NAS REDES SOCIAIS: 
+                        <a href="https://web.facebook.com/" target='blank'><img src={facebook} alt="facebook" /></a>
+                        <a href="https://www.instagram.com/" target='blank'><img src={instagram} alt="instagram" /></a>  
+                    </span>
                     <br />
                     <span>FALE CONOSCO</span>
                     <br />

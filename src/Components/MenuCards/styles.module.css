@@ -35,6 +35,11 @@
 
 }
 
+.card:hover{
+   background-color:  #A97AE5;
+   color: aliceblue;
+}
+
 .card > h3{
   margin: 0px 15px 0px 30px;
 }
@@ -55,6 +60,8 @@
   margin: 20px;          
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .voltarCards{
   position: absolute;
