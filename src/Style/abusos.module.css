@@ -1,0 +1,589 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    min-height: 100%;
+    overflow-y: auto; /* É para rolagem da página */
+}
+
+/* PÁGINA INICIAL */
+.hero {
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.imagem{
+
+position: absolute;
+width: 608px;
+height: 608px;
+left: 0px;
+top: 155px;
+z-index: 1; /*Para deixar a imagem atras*/
+}
+
+
+.titulo {
+    width: 533px;
+    height: 75px;
+    left: 677px;
+    top: 367px;
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: center;
+    color: #000000;
+}
+
+.introdução {
+  z-index: 2; /*Para deixar o testo na frente*/
+}
+
+
+.flecha {
+  position: absolute;
+  bottom: 30px;             
+  left: 50%;
+  font-size: 48px;
+  cursor: pointer;  /* Mostra uma mão quando coloca o mouse em cima */
+  animation: bounce 1.5s infinite;
+  
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+
+
+
+
+/* CONTEÚDO VIOLENCIA FÍSICA*/
+
+.ImgViolenciaFisica{
+position: absolute;
+width: 541px;
+height: 541px;
+left: 1225px;
+top: 1212px;
+filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
+border-radius: 100px;
+}
+
+.conteudo1 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 1888px;
+  height: 100dvh;
+  background-color: #F1C5A1;
+}
+
+.secaoAbusos1{
+  width: 500px;
+  text-align: center;
+  margin: 150px 100px 100px 350px;
+  align-items: center;
+  justify-content: center;
+}
+
+.secaoAbusos1 > h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 75px;
+}
+
+.RodapeAcordeao{
+  width: 1000px;
+  text-align: center;
+  margin: -30px 100px 100px 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.meuacordeao {
+  width: 100%;
+  max-width: 1000px; 
+  margin-left: 100px;
+  margin-top: -80px;
+}
+
+
+
+.meuacordeao :global(.accordion-item) {
+  background-color: #FFF7F0;
+  border: 1px solid #E0D8D0 !important;
+  border-radius: 12px !important;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.meuacordeao :global(.accordion-header) {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+.meuacordeao :global(.accordion-button) {
+  background-color: #FFF7F0 !important;
+  color: #333 !important;
+  font-weight: 500;
+  box-shadow: none !important; /* Remove a sombra azul quando clica */
+}
+
+.meuacordeao :global(.accordion-body) {
+  background-color: #FFF7F0; 
+  color: #555;
+  font-size: 14px;
+}
+
+/* Remove a cor de fundo padrão quando o acordeão está aberto */
+.meuacordeao :global(.accordion-button:not(.collapsed)) {
+  background-color: #fcefe3 !important; /* Coloca uma cor um pouco mais escura quando aberto */
+}
+
+
+
+
+
+
+
+
+/* CONTEÚDO VIOLENCIA PSICOLÓGICA*/
+
+
+.ImgViolenciaPsicologica{
+position: absolute;
+width: 541px;
+height: 541px;
+left: 75px;
+top: 2175px;
+background: url(10541569_18915859);
+filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
+border-radius: 100px;
+}
+
+.conteudo2 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 1888px;
+  height: 100dvh;
+  background-color: #ffffff;
+}
+
+.secaoAbusos2{
+  text-align: center;
+  margin: 150px 100px 100px 750px;
+  align-items: center;
+  justify-content: center;
+}
+
+.secaoAbusos2 > h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 75px;
+}
+
+.RodapeAcordeao2{
+  width: 1000px;
+  text-align: center;
+  margin: 30px 100px 100px 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.meuacordeao2 {
+  width: 100%;
+  max-width: 1000px; 
+  margin-left: 30px;
+  margin-top: 70px;
+}
+
+.meuacordeao2 :global(.accordion-item) {
+  background-color: #FFF7F0;
+  border: 1px solid #E0D8D0 !important;
+  border-radius: 12px !important;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.meuacordeao2 :global(.accordion-header) {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+.meuacordeao2 :global(.accordion-button) {
+  background-color: #F5F5F5 !important;
+  color: #333 !important;
+  font-weight: 500;
+  box-shadow: none !important; /* Remove a sombra azul quando clica */
+}
+
+.meuacordeao2 :global(.accordion-body) {
+  background-color: #F5F5F5; 
+  color: #555;
+  font-size: 14px;
+}
+
+/* Remove a cor de fundo padrão quando o acordeão está aberto */
+.meuacordeao2 :global(.accordion-button:not(.collapsed)) {
+  background-color: #DFDFDF !important; /* Coloca uma cor um pouco mais escura quando aberto */
+}
+
+
+
+/* CONTEÚDO VIOLENCIA SEXUAL*/
+
+
+.ImgViolenciaSexual{
+position: absolute;
+width: 541px;
+height: 541px;
+left: 1242px;
+top: 3120px;
+filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
+border-radius: 100px;
+}
+
+.conteudo3 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 1888px;
+  height: 100dvh;
+  background-color: #F1C5A1;
+}
+
+.secaoAbusos3{
+  width: 500px;
+  text-align: center;
+  margin: 150px 100px 100px 350px;
+  align-items: center;
+  justify-content: center;
+}
+
+.secaoAbusos3 > h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 75px;
+}
+
+.RodapeAcordeao3{
+  width: 1000px;
+  text-align: center;
+  margin: -30px 100px 100px 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.meuacordeao3 {
+  width: 100%;
+  max-width: 1000px; 
+  margin-left: 100px;
+  margin-top: -80px;
+}
+
+.meuacordeao3 :global(.accordion-item) {
+  background-color: #FFF7F0;
+  border: 1px solid #E0D8D0 !important;
+  border-radius: 12px !important;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.meuacordeao3 :global(.accordion-header) {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.meuacordeao3 :global(.accordion-button) {
+  background-color: #FFF7F0 !important;
+  color: #333 !important;
+  font-weight: 500;
+  box-shadow: none !important; /* Remove a sombra azul quando clica */
+}
+
+.meuacordeao3 :global(.accordion-body) {
+  background-color: #FFF7F0; 
+  color: #555;
+  font-size: 14px;
+}
+
+/* Remove a cor de fundo padrão quando o acordeão está aberto */
+.meuacordeao3 :global(.accordion-button:not(.collapsed)) {
+  background-color: #fcefe3 !important; /* Coloca uma cor um pouco mais escura quando aberto */
+}
+
+
+/* CONTEÚDO VIOLENCIA PATRIMONIAL*/
+
+
+.ImgViolenciaPatrimonial{
+position: absolute;
+width: 541px;
+height: 541px;
+left: 97px;
+top: 4070px;
+box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+border-radius: 100px;
+} 
+
+.conteudo4 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 1888px;
+  height: 100dvh;
+  background-color: #ffffff;
+}
+
+.secaoAbusos4{
+  text-align: center;
+  margin: 150px 100px 100px 750px;
+  align-items: center;
+  justify-content: center;
+}
+
+.secaoAbusos4 > h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 75px;
+}
+
+.RodapeAcordeao4{
+  width: 1000px;
+  text-align: center;
+  margin: 30px 100px 100px 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.meuacordeao4 {
+  width: 100%;
+  max-width: 1000px; 
+  margin-left: 30px;
+  margin-top: 70px;
+}
+
+
+.meuacordeao4 :global(.accordion-item) {
+  background-color: #FFF7F0;
+  border: 1px solid #E0D8D0 !important;
+  border-radius: 12px !important;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.meuacordeao4 :global(.accordion-header) {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+.meuacordeao4 :global(.accordion-button) {
+  background-color: #F5F5F5 !important;
+  color: #333 !important;
+  font-weight: 500;
+  box-shadow: none !important; /* Remove a sombra azul quando clica */
+}
+
+.meuacordeao4 :global(.accordion-body) {
+  background-color: #F5F5F5; 
+  color: #555;
+  font-size: 14px;
+}
+
+/* Remove a cor de fundo padrão quando o acordeão está aberto */
+.meuacordeao4 :global(.accordion-button:not(.collapsed)) {
+  background-color: #DFDFDF !important; /* Coloca uma cor um pouco mais escura quando aberto */
+}
+
+
+
+/* CONTEÚDO VIOLENCIA MORAL*/
+
+
+.ImgViolenciaMoral{
+position: absolute;
+width: 541px;
+height: 541px;
+left: 1242px;
+top: 5010px;
+border-radius: 100px;
+}
+
+.conteudo5 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 1888px;
+  height: 100dvh;
+  background-color: #F1C5A1;
+}
+
+.secaoAbusos5{
+  width: 500px;
+  text-align: center;
+  margin: 150px 100px 100px 350px;
+  align-items: center;
+  justify-content: center;
+}
+
+.secaoAbusos5 > h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 75px;
+}
+
+.RodapeAcordeao5{
+  width: 1000px;
+  text-align: center;
+  margin: -30px 100px 100px 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.meuacordeao5 {
+  width: 100%;
+  max-width: 1000px; 
+  margin-left: 100px;
+  margin-top: -80px;
+}
+
+.meuacordeao5 :global(.accordion-item) {
+  background-color: #FFF7F0;
+  border: 1px solid #E0D8D0 !important;
+  border-radius: 12px !important;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.meuacordeao5 :global(.accordion-header) {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.meuacordeao5 :global(.accordion-button) {
+  background-color: #FFF7F0 !important;
+  color: #333 !important;
+  font-weight: 500;
+  box-shadow: none !important; /* Remove a sombra azul quando clica */
+}
+
+.meuacordeao5 :global(.accordion-body) {
+  background-color: #FFF7F0; 
+  color: #555;
+  font-size: 14px;
+}
+
+/* Remove a cor de fundo padrão quando o acordeão está aberto */
+.meuacordeao5 :global(.accordion-button:not(.collapsed)) {
+  background-color: #fcefe3 !important; /* Coloca uma cor um pouco mais escura quando aberto */
+}
+
+
+
+
+/* CONTEÚDO VIOLENCIA DOMESTICA*/
+
+
+.ImgViolenciaDomestica{
+position: absolute;
+width: 666px;
+height: 493px;
+left: 1225px;
+top: 6050px;
+z-index: 1;
+}
+
+.conteudo6{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 1888px;
+  height: 100dvh;
+  background-color: #ffffff;
+
+}
+
+.secaoAbusos6{
+  margin-top: 200px;
+  margin-bottom: auto;
+  margin-right: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  max-width: 1000px;
+  z-index: 2;
+}
+
+.secaoAbusos6 > h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 75px;
+}
+
+
+
+.btoSOS:hover {
+ color: rgb(0, 1, 12);
+  font-weight: bold;
+}
+
+.btoSOS{
+  text-decoration: none;
+  justify-content: end;
+  background: red;
+  color: white;
+  font-weight: bold;
+  border: red 1px solid;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 25px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  width: 195px;
+
+}

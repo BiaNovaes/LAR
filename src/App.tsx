@@ -7,6 +7,8 @@ import ResetarSenha from "./Pages/ResetarSenha/index.tsx";
 import FormAjuda from "./Pages/FormAjuda.tsx";
 import Login from "./Pages/Login/Login.tsx";
 import FormQueroAjuda from "./Pages/FormQueroAjuda.tsx";
+import TiposDeAbuso from "./Pages/TiposAbusos/TiposAbusos.tsx";
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
       <Route path="/preciso-ajuda" element={<FormAjuda />} />
       <Route path="/formqueroajuda" element={<FormQueroAjuda />} />
       <Route path="/login" element={<Login />} />
+      <Route path="TiposAbusos" element={<TiposDeAbuso />} />
     </Routes>
   );
 }
