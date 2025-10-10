@@ -10,6 +10,8 @@ import FormQueroAjuda from "./Pages/FormQueroAjuda.tsx";
 import TiposDeAbuso from "./Pages/TiposAbusos/TiposAbusos.tsx";
 
 
+import Instituicao from "./Pages/Instituicao.tsx";
+
 function App() {
   return (
     <Routes>
@@ -22,6 +24,7 @@ function App() {
       <Route path="/formqueroajuda" element={<FormQueroAjuda />} />
       <Route path="/login" element={<Login />} />
       <Route path="TiposAbusos" element={<TiposDeAbuso />} />
+      <Route path="/instituicao" element={<Instituicao />}/>
     </Routes>
   );
 }
