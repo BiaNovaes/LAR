@@ -8,7 +8,7 @@ import FormAjuda from "./Pages/FormAjuda.tsx";
 import Login from "./Pages/Login/Login.tsx";
 import FormQueroAjuda from "./Pages/FormQueroAjuda.tsx";
 import TiposDeAbuso from "./Pages/TiposAbusos/TiposAbusos.tsx";
-
+import "./App.css";
 
 import Instituicao from "./Pages/Instituicao.tsx";
 
@@ -24,7 +24,7 @@ function App() {
       <Route path="/formqueroajuda" element={<FormQueroAjuda />} />
       <Route path="/login" element={<Login />} />
       <Route path="TiposAbusos" element={<TiposDeAbuso />} />
-      <Route path="/instituicao" element={<Instituicao />}/>
+      <Route path="/instituicao" element={<Instituicao />} />
     </Routes>
   );
 }
