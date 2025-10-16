@@ -3,7 +3,7 @@ import HomeInicio from '../Components/hero';
 import MenuCards from '../Components/MenuCards';
 import PerguntasFrequentes from '../Components/perguntasFrequentes';
 import RodapeHome from '../Components/RodapeHome';
-import TiposAbusos from '../Components/tiposAbusos';
+import TiposAbusos from '../Components/tiposAbusosHome';
 
 
 function Home () {

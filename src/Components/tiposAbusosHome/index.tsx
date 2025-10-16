@@ -1,5 +1,6 @@
-import { useNavigate } from 'react-router-dom';
+
 import style from './styles.module.css'
+import {HashLink} from 'react-router-hash-link'
 
 
 function TiposAbusos(){
@@ -17,7 +18,7 @@ function TiposAbusos(){
                     suitable for your health.
                </p>
                <div className={style.containerBtoAbs}>
-                     <button className={style.btoSaibaMaisAbs}>Saiba Mais</button>
+                     <HashLink to='/TiposAbusos#TiposAbusos' className={style.btoSaibaMaisAbs} >Saiba Mais</HashLink>
                </div>
             
             </div>
@@ -25,12 +26,13 @@ function TiposAbusos(){
             <div className={style.containerTopicosAbs}>
                 
                     
-                        <button className={style.topicoBto}>Violência Domestica</button>
-                        <button className={style.topicoBto}>Violência Física </button>
+                       
+                        <HashLink smooth to='/TiposAbusos#VFisica' className={style.topicoBto}>Violência Física </HashLink>
                         <button className={style.topicoBto}>Violência Psicológica</button>
                         <button className={style.topicoBto}>Violência Sexual</button>
                         <button className={style.topicoBto}>Violência Patrimonial</button>
                         <button className={style.topicoBto}>Violência Moral</button>
+                        <button className={style.topicoBto} >Violência Domestica</button>
                
                 
             </div>

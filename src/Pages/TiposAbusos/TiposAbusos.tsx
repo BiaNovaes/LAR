@@ -7,7 +7,6 @@ import ImgViolenciaPatrimonial from '../../assets/imagens/Abusos/violenciaPatrim
 import ImgViolenciaMoral from '../../assets/imagens/Abusos/violenciaMoral.jpg'
 import ImgViolenciaDomestica from '../../assets/imagens/Abusos/violenciaDomestica.jpg'
 import AcordeaoAbusos from '../../Components/Acordeao/acordeaoViolenciaFisica';
-import { FaChevronDown } from 'react-icons/fa';
 import AcordeaoAbusos2 from '../../Components/Acordeao/acordeaoViolenciaPsicologica';
 import AcordeaoAbusos3 from '../../Components/Acordeao/acordeaoViolenciaSexual';
 import AcordeaoAbusos4 from '../../Components/Acordeao/acordeaoViolenciaPatrimonial';
@@ -18,9 +17,12 @@ import Cabecalho from '../../Components/Cabecalho';
 
 
 
+
 function TiposDeAbuso() {
+
+
   return (
-    <div className={style.TiposDeAbusoContainer}>
+    <div className={style.TiposDeAbusoContainer} id='TiposAbusos'>
         <Cabecalho/>
       <header className={style.hero}>
 
@@ -46,7 +48,7 @@ function TiposDeAbuso() {
       </header>
 
 
-      <div className={style.conteudo1}>
+      <div className={style.conteudo1}id='VFisica'>
         
         <img src={ImgViolenciaFisica} className={style.ImgViolenciaFisica} />
 

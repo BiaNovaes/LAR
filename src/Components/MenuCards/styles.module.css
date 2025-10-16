@@ -1,3 +1,6 @@
+
+
+
 /* MENU CARDS */
 
 .menuCards{
@@ -8,7 +11,7 @@
   font-family: cursive;
   background-image: url(../../assets/imagens/vector.png);
   background-size: cover;
-  height: 110dvh;
+  height: 130dvh;
   gap: 20px;
   position: relative;
 }
