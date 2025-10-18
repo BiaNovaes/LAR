@@ -11,6 +11,7 @@ import TiposDeAbuso from "./Pages/TiposAbusos/TiposAbusos.tsx";
 import "./App.css";
 
 import Instituicao from "./Pages/Instituicao.tsx";
+import InstituicaoAjuda from "./Pages/InstituicaoPrecisoDeAjuda.tsx";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="TiposAbusos" element={<TiposDeAbuso />} />
       <Route path="/instituicao" element={<Instituicao />} />
+      <Route path="/instituicao-ajuda" element={<InstituicaoAjuda />} />
     </Routes>
   );
 }

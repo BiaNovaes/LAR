@@ -20,7 +20,7 @@ function handleNavegarInstituicaoAjuda(){
     navigate('/formqueroajuda')
 }
 function handleNavegarPrecisoAjuda(){
-    navigate('/preciso-ajuda')
+    navigate('/instituicao-ajuda')
 }
 function handleNavegarSos(){
     navigate('/Sos')

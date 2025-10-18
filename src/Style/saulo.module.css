@@ -126,3 +126,154 @@
   background: #2176bd;
   transform: translateY(-2px) scale(1.03);
 }
+
+
+/* ------------------------------------------------ */
+
+.instituicaoContainer {
+  display: flex;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.instituicaoAside {
+  background: #E6E6F6;
+  width: 140px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.logoArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.logoImg {
+  width: 60px;
+  margin-bottom: 8px;
+}
+
+.logoText {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #A9A9DB;
+}
+
+.logoSub {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.menuNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuNav li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #222;
+  margin: 18px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.menuNav li:hover {
+  color: #7CC1E4;
+}
+
+.menuBottom {
+  margin-top: 48px;
+  font-weight: bold;
+}
+
+.instituicaoMain {
+  flex: 1;
+  padding: 32px 48px 0 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instituicaoTitulo {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 24px 0 0 0;
+}
+
+.instituicaoSubtitulo {
+  font-size: 1.1rem;
+  color: #444;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 32px auto;
+}
+
+.card {
+  border-radius: 16px;
+  box-shadow: 4px 8px 16px rgba(0,0,0,0.08);
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 220px;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 8px 16px 32px rgba(0,0,0,0.12);
+}
+
+.cardIcon {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+.cardTitulo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 40px 0 8px 0;
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.cardBtn {
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cardBtn:hover {
+  filter: brightness(0.92);
+  transform: scale(1.04);
+}
