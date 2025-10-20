@@ -32,7 +32,7 @@ function Sos() {
             <div className={style.bloco}>
               <p className={style.numero}> 193</p>
 
-              <p className={style.descricao}><b>Bombeiro:</b> Situações de emergência que envolvem traumas, ferimentos ou tentativa de suicidio. Funcionamento 24hrs</p>
+              <p className={style.descricao}><b>Bombeiro:</b> Situações de emergência que envolvem traumas, ferimentos ou tentativa de suicidio.</p>
               
               <a href="tel:193" className={style.botao}>Clique aqui</a>
             </div>

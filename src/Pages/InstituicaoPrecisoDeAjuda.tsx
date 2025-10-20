@@ -1,5 +1,4 @@
 import style from "../Style/saulo.module.css";
-import styles from "../Style/milton.module.css";
 
 import avatar from '../assets/icons/Generic-avatar.svg'
 import coracao from '../assets/icons/coracao.svg'
@@ -57,40 +56,40 @@ const cards = [
 function InstituicaoAjuda() {
   return (
 
-    <div className={styles.container_cabecalho}> 
+    <div className={style.container_cabecalho}> 
 
-                <aside className={styles.sidebar}>
+                <aside className={style.sidebar}>
 
-                    <div className={styles.logo_container}>
-                        <img className={styles.logo} src={logo} alt="Logo LAR" />
+                    <div className={style.logo_container}>
+                        <img className={style.logo} src={logo} alt="Logo LAR" />
                         <div>
-                            <h1 className={styles.logo_title}>LAR</h1>
-                            <p className={styles.text_logo}>Lugar de Apoio e Recomeço</p>
+                            <h1 className={style.logo_title}>LAR</h1>
+                            <p className={style.text_logo}>Lugar de Apoio e Recomeço</p>
                         </div>
                     </div>
 
-                        <nav className={styles.menu}>
-                            <div className={styles.menu_filho}>
-                                <div className={styles.avatar}>
+                        <nav className={style.menu}>
+                            <div className={style.menu_filho}>
+                                <div className={style.avatar}>
                                     <img src={avatar} alt="avatar-login" />
-                                    <a href="/">Login</a><br/>
+                                    <a href="/login">Login</a><br/>
                                 </div>
                                 
-                                <div className={styles.avatar}>
+                                <div className={style.avatar}>
                                     <img src={coracao} alt="coracao"/>
-                                    <a href="/instituicao" >Preciso de ajuda</a>                                  
+                                    <a href="instituicao-ajuda" >Preciso de ajuda</a>                                  
                                 </div>
-                                <div className={styles.avatar}>
+                                <div className={style.avatar}>
                                     <img src={casa} alt="casa"/>
-                                    <a href="/contato">Instituições</a>                                   
+                                    <a href="/instituicao">Instituições</a>                                   
                                 </div>
-                                <div className={styles.avatar}>
+                                <div className={style.avatar}>
                                     <img src={Alertatriangulo} alt="triangulo"/>
-                                    <a href="/login">S.O.S</a>
+                                    <a href="/sos">S.O.S</a>
                                 </div>
                             </div>
 
-                            <div className={styles.avatar_circulo}>
+                            <div className={style.avatar_circulo}>
                                 <img src={circulo} alt="seta-esquerda"/>
                                 <a href="/">Pagina Inicial</a>                               
                             </div>

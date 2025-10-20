@@ -1,9 +1,13 @@
+/* Estilo da página toda */
+
 .tudo {
     background-color: #FDDFC7;
     width: 100%;
     height: 100vh;
 }
 
+
+/* Estilo do bloco Ajuda Urgente */
 .container {    
     position: absolute;
     width: 926px;
@@ -26,6 +30,7 @@
     font-size: 2.5rem;
     font-weight: bold;
     bottom: 0px;
+    margin-top: 10px;
 }
 
 .texto{
@@ -37,9 +42,9 @@
 }
 
 .linha{
-    width: 650px;
+    width: 100%;
     height: 0px;
-    left: 192px;
+    left: 200px;
     top: 400px;
     border: 1px solid #000000;
 }
@@ -51,7 +56,6 @@
     left: 961px;
     top: 0px;
 }
-
 
 .blocoTotal{
     display: flex;
@@ -115,6 +119,8 @@
 
 }
 
+/* Estilo do cabeçalho */
+
 .cabecalho{
     position: absolute;
     width: 500px;
@@ -135,6 +141,7 @@
 }
 
 .textoFinal{
+    margin-top: 30px;
     color: #242323d2;
     text-align: center;
     font-size: 13px;

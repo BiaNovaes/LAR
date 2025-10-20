@@ -37,20 +37,20 @@ function Instituicao (){
                             <div className={styles.menu_filho}>
                                 <div className={styles.avatar}>
                                     <img src={avatar} alt="avatar-login" />
-                                    <a href="/">Login</a><br/>
+                                    <a href="/login">Login</a><br/>
                                 </div>
                                 
                                 <div className={styles.avatar}>
                                     <img src={coracao} alt="coracao"/>
-                                    <a href="/instituicao" >Preciso de ajuda</a>                                  
+                                    <a href="/instituicao-ajuda" >Preciso de ajuda</a>                                  
                                 </div>
                                 <div className={styles.avatar}>
                                     <img src={casa} alt="casa"/>
-                                    <a href="/contato">Instituições</a>                                   
+                                    <a href="/instituicao">Instituições</a>                                   
                                 </div>
                                 <div className={styles.avatar}>
                                     <img src={Alertatriangulo} alt="triangulo"/>
-                                    <a href="/login">S.O.S</a>
+                                    <a href="/sos">S.O.S</a>
                                 </div>
                             </div>
 
@@ -63,7 +63,7 @@ function Instituicao (){
 
                 <main className={styles.main}>
                     <div className={styles.container_titulo}>
-                        <h2 className={styles.titulo}>Instituições</h2>
+                        <h2 className={styles.titulo}>INSTITUIÇÕES</h2>
                         <div className={styles.container_pesquisa}><input className={styles.pesquisa} type="text" placeholder="Pesquisar Instituição" />
                             <img src={lupa} alt="Lupa de pesquisa" />
                         </div>
@@ -84,7 +84,7 @@ function Instituicao (){
                     
 
                     <div className={styles.principal_box}>
-                        <div className={styles.box1}>
+                        <div className={styles.box}>
                             <img className={styles.imagemcvv} src={cvv} alt="Apoio emocional" />
                             <p className={styles.textocvv}>
                                 Centro de Valorização da Vida é um serviço voluntário gratuito de apoio emocional e prevenção do suicídio para todas as pessoas que querem e precisam conversar, sob total sigilo e anonimato.
@@ -104,7 +104,7 @@ function Instituicao (){
                             </div>
                            
                         </div>
-                        <div className={styles.box2}>
+                        <div className={styles.box}>
                               <img className={styles.imagemcvv} src={cvv} alt="Apoio emocional" />
                             <p className={styles.textocvv}>
                                 Centro de Valorização da Vida é um serviço voluntário gratuito de apoio emocional e prevenção do suicídio para todas as pessoas que querem e precisam conversar, sob total sigilo e anonimato.
@@ -123,7 +123,7 @@ function Instituicao (){
                             </div>
                            
                         </div>
-                        <div className={styles.box3}>
+                        <div className={styles.box}>
                               <img className={styles.imagemcvv} src={cvv} alt="Apoio emocional" />
                             <p className={styles.textocvv}>
                                 Centro de Valorização da Vida é um serviço voluntário gratuito de apoio emocional e prevenção do suicídio para todas as pessoas que querem e precisam conversar, sob total sigilo e anonimato.
@@ -142,7 +142,7 @@ function Instituicao (){
                             </div>
                            
                         </div>
-                        <div className={styles.box4}>
+                        <div className={styles.box}>
                               <img className={styles.imagemcvv} src={cvv} alt="Apoio emocional" />
                             <p className={styles.textocvv}>
                                 Centro de Valorização da Vida é um serviço voluntário gratuito de apoio emocional e prevenção do suicídio para todas as pessoas que querem e precisam conversar, sob total sigilo e anonimato.
@@ -161,7 +161,7 @@ function Instituicao (){
                             </div>
                            
                         </div>
-                      </div>
+                    </div>
                     
 
                 </main>
