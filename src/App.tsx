@@ -21,8 +21,8 @@ function App() {
       <Route path="/sos" element={<Sos />} />
       <Route path="/esqueci-senha" element={<EsqueciSenha />} />
       <Route path="/resetar-senha" element={<ResetarSenha />} />
-      <Route path="/preciso-ajuda" element={<FormAjuda />} />
-      <Route path="/formqueroajuda" element={<FormQueroAjuda />} />
+      <Route path="/queroajudar" element={<FormAjuda />} />
+      <Route path="/precisodeajuda" element={<FormQueroAjuda />} />
       <Route path="/login" element={<Login />} />
       <Route path="TiposAbusos" element={<TiposDeAbuso />} />
       <Route path="/instituicao" element={<Instituicao />} />

@@ -7,9 +7,7 @@ function Cabecalho () {
 
 const navigate = useNavigate();
     
-function handleNavegarLogin(){
-        navigate('/login')
-    }
+
 function handleNavegarHome(){
         navigate('/')
     }
@@ -17,10 +15,10 @@ function handleNavegarInstituicao(){
     navigate('/instituicao')
 }
 function handleNavegarInstituicaoAjuda(){
-    navigate('/formqueroajuda')
+    navigate('/queroajudar')
 }
 function handleNavegarPrecisoAjuda(){
-    navigate('/instituicao-ajuda')
+    navigate('/precisodeajuda')
 }
 function handleNavegarSos(){
     navigate('/Sos')
@@ -34,10 +32,9 @@ function handleNavegarSos(){
             
            <div>
                 <button className={style.bto} onClick={handleNavegarHome}>Home</button>
-                <button className={style.bto} onClick={handleNavegarInstituicao}>Instituição</button>
+                <button className={style.bto} onClick={handleNavegarInstituicao}>Instituições</button>
                 <button className={style.bto} onClick={handleNavegarInstituicaoAjuda}>Quero Ajudar</button>
                 <button className={style.bto} onClick={handleNavegarPrecisoAjuda}>Preciso de Ajuda</button>
-                <button className={style.bto} onClick={handleNavegarLogin}>Login</button>
                 
            </div>
 

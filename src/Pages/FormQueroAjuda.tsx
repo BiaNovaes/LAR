@@ -26,7 +26,7 @@ function FormQueroAjuda() {
         <Link to={"/"} className={style.divBto}>
           Home
         </Link>
-        <Link to={"/preciso-ajuda"} className={style.divBto}>
+        <Link to={"/queroajudar"} className={style.divBto}>
           Quero Ajudar
         </Link>
         <Link to={"/login"} className={style.divBto}>

@@ -8,8 +8,8 @@ function Sos() {
     <header className={style.tudo}>
       <div className={style.cabecalho}>
         <Link to={"/login"} className={style.hiperlink}>Login</Link>
-        <Link to={"/formqueroajuda"} className={style.hiperlink}>Quero Ajudar</Link>
-        <Link to={"/preciso-ajuda"} className={style.hiperlink}>Preciso de Ajuda</Link>
+        <Link to={"/queroajudar"} className={style.hiperlink}>Quero Ajudar</Link>
+        <Link to={"/precisodeajuda"} className={style.hiperlink}>Preciso de Ajuda</Link>
       </div>
 
       <div className={style.container}>

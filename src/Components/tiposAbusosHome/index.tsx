@@ -28,11 +28,11 @@ function TiposAbusos(){
                     
                        
                         <HashLink smooth to='/TiposAbusos#VFisica' className={style.topicoBto}>Violência Física </HashLink>
-                        <button className={style.topicoBto}>Violência Psicológica</button>
-                        <button className={style.topicoBto}>Violência Sexual</button>
-                        <button className={style.topicoBto}>Violência Patrimonial</button>
-                        <button className={style.topicoBto}>Violência Moral</button>
-                        <button className={style.topicoBto} >Violência Domestica</button>
+                       <HashLink smooth to='/TiposAbusos#VPsicologica' className={style.topicoBto}>Violência Psicológica </HashLink>
+                        <HashLink smooth to='/TiposAbusos#VSexual' className={style.topicoBto}>Violência Sexual </HashLink>
+                        <HashLink smooth to='/TiposAbusos#VPatrimonial' className={style.topicoBto}>Violência Patrimonial </HashLink>
+                        <HashLink smooth to='/TiposAbusos#VMoral' className={style.topicoBto}>Violência Moral </HashLink>
+                        <HashLink smooth to='/TiposAbusos#VDomestica' className={style.topicoBto}>Violência Doméstica </HashLink>
                
                 
             </div>

@@ -39,8 +39,9 @@
 }
 
 .card:hover{
-   background-color:  #A97AE5;
-   color: aliceblue;
+   background-color:  #f5f0fc;
+   transform: translateY(-4px) scale(1.02);
+  box-shadow: 8px 16px 32px rgba(0,0,0,0.12);
 }
 
 .card > h3{

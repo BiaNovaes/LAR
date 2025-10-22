@@ -1,3 +1,61 @@
 .perguntasFrequentes{
     height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.PFrequentes{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+
+.acordeaoPerguntas {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px; 
+  margin-left: 100px;
+  margin-top: -80px;
+}
+
+
+.acordeaoPerguntas :global(.accordion-item) {
+  background-color: #fafafa;
+  border: 1px solid #919191 !important;
+  border-radius: 12px !important;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.acordeaoPerguntas :global(.accordion-header) {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+.acordeaoPerguntas :global(.accordion-button) {
+  background-color: #fafafa !important;
+  color: #000000 !important;
+  font-weight: 500;
+  box-shadow: none !important; /* Remove a sombra azul quando clica */
+}
+
+.acordeaoPerguntas :global(.accordion-body) {
+  background-color: #ffffff; 
+  color: #000000;
+  font-size: 14px;
+}
+
+/* Remove a cor de fundo padrão quando o acordeão está aberto */
+.acordeaoPerguntas :global(.accordion-button:not(.collapsed)) {
+  background-color: #dbdad8 !important; /* Coloca uma cor um pouco mais escura quando aberto */
+}
+

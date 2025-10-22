@@ -1,5 +1,4 @@
 import style from "../Style/saulo.module.css";
-
 import avatar from '../assets/icons/Generic-avatar.svg'
 import coracao from '../assets/icons/coracao.svg'
 import Alertatriangulo from '../assets/icons/Alertatriangulo.svg'

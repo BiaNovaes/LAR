@@ -7,7 +7,7 @@ function HomeInicio(){
     const navigate = useNavigate();
 
     function handleNavegarPrecisoAjuda(){
-    navigate('/preciso-ajuda') }
+    navigate('/instituicao-ajuda') }
 
     return (
         <div className={style.homeInicio}>

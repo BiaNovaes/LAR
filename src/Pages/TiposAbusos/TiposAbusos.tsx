@@ -71,7 +71,7 @@ function TiposDeAbuso() {
 
       </div>
 
-      <div className={style.conteudo2}>
+      <div className={style.conteudo2} id='VPsicologica'>
 
         <img src={ImgViolenciaPsicologica} className={style.ImgViolenciaPsicologica} />
 
@@ -93,7 +93,7 @@ function TiposDeAbuso() {
       </div>
 
 
-      <div className={style.conteudo3}>
+      <div className={style.conteudo3} id='VSexual'>
 
         <img src={ImgViolenciaSexual} className={style.ImgViolenciaSexual} />
 
@@ -117,7 +117,7 @@ function TiposDeAbuso() {
 
       </div>
 
-      <div className={style.conteudo4}>
+      <div className={style.conteudo4} id='VPatrimonial'>
 
         <img src={ImgViolenciaPatrimonial} className={style.ImgViolenciaPatrimonial} />
 
@@ -140,7 +140,7 @@ function TiposDeAbuso() {
       </div>
 
 
-      <div className={style.conteudo5}>
+      <div className={style.conteudo5} id='VMoral'>
 
         <img src={ImgViolenciaMoral} className={style.ImgViolenciaMoral} />
 
@@ -163,7 +163,7 @@ function TiposDeAbuso() {
       </div>
 
 
-      <div className={style.conteudo6}>
+      <div className={style.conteudo6} id='VDomestica'>
 
 
 

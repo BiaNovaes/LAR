@@ -60,7 +60,7 @@ function FormAjuda() {
         <Link to={"/"} className={style.divBto}>
           Home
         </Link>
-        <Link to={"/formqueroajuda"} className={style.divBto}>
+        <Link to={"/precisodeajuda"} className={style.divBto}>
           Preciso de ajuda
         </Link>
         <Link to={"/login"} className={style.divBto}>
