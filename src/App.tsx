@@ -9,7 +9,6 @@ import Login from "./Pages/Login/Login.tsx";
 import FormQueroAjuda from "./Pages/FormQueroAjuda.tsx";
 import TiposDeAbuso from "./Pages/TiposAbusos/TiposAbusos.tsx";
 import "./App.css";
-
 import Instituicao from "./Pages/Instituicao.tsx";
 import InstituicaoAjuda from "./Pages/InstituicaoPrecisoDeAjuda.tsx";
 
