@@ -12,10 +12,10 @@ function TiposAbusos(){
                <span>Tipo de Abuso</span>
                <br />
                <p>
-                    We provide to you the best choiches for you. Adjust it to your health <br />
-                    needs and make sure your undergo treatment with our highly <br />
-                    qualified doctors you can consult with us which type of service is <br />
-                    suitable for your health.
+                  Aqui listaremos algumas diferentes tipos de abuso <br />
+                  para ajudar na identificação dos sinais e na conscientização sobre suas consequências. <br />
+                  Entender o que é abuso é um passo essencial para quebrar o silêncio, <br />
+                  buscar ajuda e fortalecer a proteção e o respeito em todas as relações  <br />
                </p>
                <div className={style.containerBtoAbs}>
                      <HashLink to='/TiposAbusos#TiposAbusos' className={style.btoSaibaMaisAbs} >Saiba Mais</HashLink>
