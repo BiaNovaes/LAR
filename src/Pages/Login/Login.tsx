@@ -1,5 +1,5 @@
 import Cabecalho from "../../Components/Cabecalho";
-import Rodape from "../../Components/Rodape";
+// import Rodape from "../../Components/Rodape";
 import { useEffect, useState, type ChangeEvent } from "react";
 import style from "./styles.module.css";
 import { Link } from "react-router-dom";
