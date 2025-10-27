@@ -2,8 +2,7 @@ import CabecalhoHome from '../Components/CabecalhoHome';
 import HomeInicio from '../Components/hero';
 import MenuCards from '../Components/MenuCards';
 import PerguntasFrequentes from '../Components/perguntasFrequentes';
-// import RodapeHome from '../Components/RodapeHome';
-import RodapeHome2 from '../Components/RodapeHome2';
+import RodapeHome from '../Components/RodapeHome';
 import TiposAbusos from '../Components/tiposAbusosHome';
 
 
@@ -19,7 +18,7 @@ function Home () {
     <MenuCards/>
     <TiposAbusos/>
     <PerguntasFrequentes/>
-    <RodapeHome2/>
+    <RodapeHome/>
       
         </div>
     )

@@ -12,6 +12,7 @@
   background-image: url(../../assets/imagens/vector.png);
   background-size: cover;
   height: 130dvh;
+  max-height: 130dvh;
   gap: 20px;
   position: relative;
 }
@@ -25,7 +26,7 @@
   display: grid;        
   grid-template-columns: 1fr 1fr 1fr; 
   margin: 0px 450px; 
-  cursor: pointer;            
+  cursor: pointer;           
 }
 
 .card { 
@@ -39,8 +40,8 @@
 }
 
 .card:hover{
-   background-color:  #f5f0fc;
-   transform: translateY(-4px) scale(1.02);
+  background-color:  #f5f0fc;
+  transform: translateY(-4px) scale(1.02);
   box-shadow: 8px 16px 32px rgba(0,0,0,0.12);
 }
 
