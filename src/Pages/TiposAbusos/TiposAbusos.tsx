@@ -13,6 +13,7 @@ import AcordeaoAbusos4 from '../../Components/Acordeao/acordeaoViolenciaPatrimon
 import AcordeaoAbusos5 from '../../Components/Acordeao/acordeaoViolenciaMoral';
 import { Link } from 'react-router-dom';
 import Cabecalho from '../../Components/Cabecalho';
+import RodapeHome from '../../Components/RodapeHome';
 
 
 
@@ -23,7 +24,7 @@ function TiposDeAbuso() {
 
   return (
     <div className={style.TiposDeAbusoContainer} id='TiposAbusos'>
-        <Cabecalho/>
+      <Cabecalho />
       <header className={style.hero}>
 
 
@@ -48,8 +49,8 @@ function TiposDeAbuso() {
       </header>
 
 
-      <div className={style.conteudo1}id='VFisica'>
-        
+      <div className={style.conteudo1} id='VFisica'>
+
         <img src={ImgViolenciaFisica} className={style.ImgViolenciaFisica} />
 
 
@@ -113,7 +114,7 @@ function TiposDeAbuso() {
 
         <div className={style.RodapeAcordeao3}> Consentimento é a chave: Qualquer ato sexual sem o consentimento livre e explícito da outra pessoa é considerado violência sexual. <br /> O silêncio ou a ausência de um "não" não significam "sim", <b>denuncie</b>.</div>
 
-        
+
 
       </div>
 
@@ -173,12 +174,12 @@ function TiposDeAbuso() {
 
 
           <p>De acordo com o art. 5º da Lei Maria da Penha, violência doméstica e familiar contra a mulher é “qualquer ação <br /> ou omissão baseada no gênero que lhe cause morte, lesão, sofrimento físico, sexual ou psicológico e dano moral <br /> ou patrimonial”. <br />
-Quando a vítima silencia diante da violência, o agressor não se sente responsabilizado pelos seus atos - isso sem <br /> contar o fato de que a sociedade, em suas diversas práticas, reforça a cultura patriarcal e machista, o que <br /> dificulta a percepção da mulher de que está vivenciando o ciclo da violência. <br />
-Com o tempo, os intervalos entre uma fase e outra ficam menores, e as agressões passam a acontecer sem <br /> obedecer à ordem das fases. Em alguns casos, o ciclo da violência termina com o feminicídio, que é o assassinato <br /> da vítima.<br /><br />
+            Quando a vítima silencia diante da violência, o agressor não se sente responsabilizado pelos seus atos - isso sem <br /> contar o fato de que a sociedade, em suas diversas práticas, reforça a cultura patriarcal e machista, o que <br /> dificulta a percepção da mulher de que está vivenciando o ciclo da violência. <br />
+            Com o tempo, os intervalos entre uma fase e outra ficam menores, e as agressões passam a acontecer sem <br /> obedecer à ordem das fases. Em alguns casos, o ciclo da violência termina com o feminicídio, que é o assassinato <br /> da vítima.<br /><br />
 
             Não se cale, <b>denuncie</b>.</p>
 
-            <Link to={'/sos'} className={style.btoSOS}>S.O.S</Link>
+          <Link to={'/sos'} className={style.btoSOS}>S.O.S</Link>
         </div>
 
         <img src={ImgViolenciaDomestica} className={style.ImgViolenciaDomestica} />
@@ -187,7 +188,7 @@ Com o tempo, os intervalos entre uma fase e outra ficam menores, e as agressões
       </div>
 
 
-
+      <RodapeHome />
 
     </div>
 
