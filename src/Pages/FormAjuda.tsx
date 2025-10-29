@@ -9,7 +9,7 @@ import { api } from "../Api/api";
 
 function FormAjuda() {
   
-   const [queroAjudar, setQueroAjudar] = useState<QueroAjudar[]>([]);
+   const [_, setQueroAjudar] = useState<QueroAjudar[]>([]);
     // const [loading, setLoading] = useState(false);
 
     // const [id, setId] = useState('');

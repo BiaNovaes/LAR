@@ -7,7 +7,7 @@ import { api } from "../Api/api";
 
 function FormQueroAjuda() {
 
-    const [precisoAjuda, setPrecisoAjuda] = useState<PrecisoAjuda[]>([]);
+    const [_, setPrecisoAjuda] = useState<PrecisoAjuda[]>([]);
     // const [loading, setLoading] = useState(false);
 
     // const [id, setId] = useState('');
