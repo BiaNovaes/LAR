@@ -20,7 +20,7 @@ function RodapeHome() {
                             <span>POLÍTICA DE PRIVACIDADE</span>
                         </a>
                         <div className={style.linha} />
-                        <Link to={"/"} className={style.faleconosco}> FALE CONOSCO </Link>
+                        <Link to={"/faleConosco"} className={style.faleconosco}> FALE CONOSCO </Link>
                     </div>
                     <div className={style.criadoLar}>
                         <span>© 2025 - CRIADO POR LAR - Lugar de apoio e recomeço. </span>

@@ -88,6 +88,25 @@ export const api = {
         let json = await response.json();
         return json;
     },
+
+    AdicionarFaleConosco: async (name: string, telefone: string, email:string, endereco: string, assunto: string, mensagem:string) => {
+        let response = await fetch('http://localhost:3000/faleConosco/', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: name,
+                telefone: telefone,
+                email: email,
+                endereco: endereco,
+                assunto: assunto,
+                mensagem: mensagem
+            }),
+            headers: {
+                'Content-type' : 'application/json'
+            }
+        });
+        let json = await response.json();
+        return json;
+    }
 }
 
 
