@@ -67,7 +67,7 @@ export const api = {
         return json;
     },
 
-    AdicionarFormularioPrecisoAjuda: async (name: string, telefone: string, email: string, assunto:string, instituicao: string,cidade: string, estado: string) => {
+    AdicionarFormularioPrecisoAjuda: async (name: string, telefone: string, email: string, assunto: string, instituicao: string, cidade: string, estado: string, tremor: boolean, cansaco: boolean) => {
         let response = await fetch('http://localhost:3000/FormularioPrecisoAjuda/', {
             method: 'POST',
             body: JSON.stringify({
@@ -77,7 +77,9 @@ export const api = {
                 assunto: assunto,
                 instituicao: instituicao,
                 cidade: cidade,
-                estado: estado
+                estado: estado,
+                tremor: tremor,
+                cansaco: cansaco
             }),
             headers: {
                 'Content-type': 'application/json'
