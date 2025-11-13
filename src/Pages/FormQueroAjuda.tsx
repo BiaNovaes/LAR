@@ -136,12 +136,15 @@ function FormQueroAjuda() {
 
     const AdicionarPost = async () => {
         if (name && telefone && email && assunto && instituicao && cidade && estado) { 
-            let json = await api.AdicionarFormularioPrecisoAjuda(name, telefone, email, assunto, instituicao, cidade, estado, tremor, cansaco);
-            if (json.data?.id) {
-                alert('Formulario enviado com sucesso!')
-                setPrecisoAjuda((PrecisoAjuda) => [...PrecisoAjuda, json] );
+            let json = await api.AdicionarFormularioPrecisoAjuda(name, telefone, email, assunto, instituicao, cidade, estado, tremor, cansaco, 
+                                                                desanimo, faltaAr, agonia, faltaFoco, alteracaoHumor, sensacaoDesconexao, preocupacaoPeso, 
+                                                                perdaInteresse, abusoPsicologico, abusoFisico, abusoSexual, abusoPatrimonial, abusoMoral);
+
+            if (json?.message === 'Formulario enviado com sucesso!') {
+              alert(json.message);
+              setPrecisoAjuda((PrecisoAjuda) => [...PrecisoAjuda, json]);
             } else {
-                alert('Erro ao enviar formulario!')
+              alert('Erro ao enviar formulario!');
             }
         }
     }

@@ -51,13 +51,13 @@ export const api = {
         let response = await fetch('http://localhost:3000/FormularioQueroAjudar/', {
             method: 'POST',
             body: JSON.stringify({
-                name: name,
-                telefone: telefone,
-                email: email,
-                valor: valor,
-                instituicao: instituicao,
-                cidade: cidade,
-                estado: estado
+                NAME: name,
+                TELEFONE: telefone,
+                EMAIL: email,
+                VALOR: valor,
+                INSTITUICAO: instituicao,
+                CIDADE: cidade,
+                ESTADO: estado
             }),
             headers: {
                 'Content-type': 'application/json'
@@ -67,19 +67,35 @@ export const api = {
         return json;
     },
 
-    AdicionarFormularioPrecisoAjuda: async (name: string, telefone: string, email: string, assunto: string, instituicao: string, cidade: string, estado: string, tremor: boolean, cansaco: boolean) => {
+    AdicionarFormularioPrecisoAjuda: async (name: string, telefone: string, email: string, assunto: string, instituicao: string, cidade: string, estado: string, 
+                                            tremor: boolean, cansaco: boolean, desanimo: boolean, faltaAr: boolean, agonia: boolean, faltaFoco: boolean, alteracaoHumor: boolean,
+                                            sensacaoConexao: boolean, preocupacaoPeso: boolean, perdaInteresse: boolean, abusoPsicologico: boolean, abusoFisico: boolean,
+                                            abusoSexual: boolean, abusoPatrimonial: boolean, abusoMoral: boolean) => {
         let response = await fetch('http://localhost:3000/FormularioPrecisoAjuda/', {
             method: 'POST',
             body: JSON.stringify({
-                name: name,
-                telefone: telefone,
-                email: email,
-                assunto: assunto,
-                instituicao: instituicao,
-                cidade: cidade,
-                estado: estado,
-                tremor: tremor,
-                cansaco: cansaco
+                NAME: name,
+                TELEFONE: telefone,
+                EMAIL: email,
+                ASSUNTO: assunto,
+                INSTITUICAO: instituicao,
+                CIDADE: cidade,
+                ESTADO: estado,
+                TREMOR: tremor,
+                CANSACO: cansaco,
+                DESANIMO: desanimo,
+                FALTAAR: faltaAr,
+                AGONIA: agonia,
+                FALTAFOCO: faltaFoco,
+                ALTERACAOHUMOR: alteracaoHumor,
+                SENSACAOCONEXAO: sensacaoConexao,
+                PREOCUPACAOPESO: preocupacaoPeso,
+                PERDAINTERESSE: perdaInteresse,
+                ABUSOPSICOLOGICO: abusoPsicologico,
+                ABUSOFISICO: abusoFisico,
+                ABUSOSEXUAL: abusoSexual,
+                ABUSOPATRIMONIAL: abusoPatrimonial,
+                ABUSOMORAL: abusoMoral
             }),
             headers: {
                 'Content-type': 'application/json'

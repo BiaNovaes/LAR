@@ -59,11 +59,17 @@ function FormAjuda() {
     const AdicionarPost = async () => {
         if (name && telefone && email && valor && instituicao && cidade && estado) {
             let json = await api.AdicionarFormulario(name, telefone, email, valor, instituicao, cidade, estado);
-            if (json.data.id) {
-                alert('Formulario enviado com sucesso!')
-                setQueroAjudar((QueroAjudar) => [...QueroAjudar, json] );
+            // if (json.data.id) {
+            //     alert('Formulario enviado com sucesso!')
+            //     setQueroAjudar((QueroAjudar) => [...QueroAjudar, json] );
+            // } else {
+            //     alert('Erro ao enviar formulario!')
+            // }
+            if (json?.message === 'Formulario enviado com sucesso!') {
+              alert(json.message);
+              setQueroAjudar((QueroAjudar) => [...QueroAjudar, json]);
             } else {
-                alert('Erro ao enviar formulario!')
+              alert('Erro ao enviar formulario!');
             }
         }
     }
