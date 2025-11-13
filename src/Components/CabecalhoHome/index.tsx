@@ -23,6 +23,9 @@ function handleNavegarPrecisoAjuda(){
 function handleNavegarSos(){
     navigate('/Sos')
 }
+function handleNavegarAbuso(){
+    navigate('/TiposAbusos')
+}
     return (
         <div>
          <div className={style.cabecalhoHome}>
@@ -32,6 +35,7 @@ function handleNavegarSos(){
             
            <div>
                
+                <button className={style.bto} onClick={handleNavegarAbuso}>Tipos de Abuso</button>
                 <button className={style.bto}  onClick={handleNavegarInstituicao}>Instituições</button>
                 <button className={style.bto}  onClick={handleNavegarInstituicaoAjuda}>Quero Ajudar</button>
                 <button className={style.bto}  onClick={handleNavegarPrecisoAjuda}>Preciso de Ajuda</button>

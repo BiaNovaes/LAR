@@ -1,0 +1,81 @@
+.rodapeHome2 {
+    height: 20dvh;
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url(../../assets/imagens/rodapeHome2.png);
+    background-size: cover;
+}
+
+.infoRodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.politicaPrivacidade:hover,
+.faleconosco:hover {
+    text-decoration: underline;
+}
+
+
+.politicaPrivacidade,
+.faleconosco,
+.lar {
+    color: rgb(104, 104, 104);
+    font-family: "Poiret One", sans-serif;
+
+}
+
+.politicaPrivacidade {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.politicaPrivacidade:hover {
+    text-decoration: underline;
+}
+
+.faleconosco {
+    text-decoration: none;
+}
+
+.faleconosco:hover {
+    text-decoration: underline;
+}
+
+.criadoLar {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+
+}
+
+.redesRodape {
+    margin-left: 100px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logotipos {
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+
+.linha {
+    margin-left: 4px;
+    margin-top: 1px;
+    width: 1px;
+    height: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.418);
+}

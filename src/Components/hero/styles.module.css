@@ -1,4 +1,5 @@
 /*Hero Home Inicio*/
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
 
 .homeInicio{
   height: 100dvh;
@@ -18,10 +19,10 @@
 }
  
  .textoHome > h1{
+  font-family: "Kavoon", serif;
   display: flex;
   justify-content: center;
   font-size: 60px;
-  font-family: cursive;
   margin-bottom: 20px;
 } 
 

@@ -12,7 +12,7 @@ function TiposAbusos(){
                <span>Tipo de Abuso</span>
                <br />
                <p>
-                  Aqui listaremos algumas diferentes tipos de abuso <br />
+                  Aqui listaremos alguns diferentes tipos de abuso <br />
                   para ajudar na identificação dos sinais e na conscientização sobre suas consequências. <br />
                   Entender o que é abuso é um passo essencial para quebrar o silêncio, <br />
                   buscar ajuda e fortalecer a proteção e o respeito em todas as relações  <br />

@@ -2,40 +2,75 @@ import { useState } from "react";
 import style from "../Style/saulo.module.css";
 import ilustracao from "../assets/imagens/Formulario.jpg";
 import { Link } from "react-router-dom";
-// import CabecalhoHome from "../Components/CabecalhoHome";
+import type { QueroAjudar } from "../types/queroAjudar";
+import { useEffect, type ChangeEvent } from "react";
+import { api } from "../Api/api";
+
 
 function FormAjuda() {
-  const [nome, setNome] = useState("");
-  function doacaoNome(evento: React.ChangeEvent<HTMLInputElement>) {
-    setNome(evento.target.value);
-  }
+  
+   const [_, setQueroAjudar] = useState<QueroAjudar[]>([]);
+    // const [loading, setLoading] = useState(false);
 
-  const [sobrenome, setSobrenome] = useState("");
-  function doacaoSobrenome(evento: React.ChangeEvent<HTMLInputElement>) {
-    setSobrenome(evento.target.value);
-  }
+    // const [id, setId] = useState('');
+    const [name, setName] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [email, setEmail] = useState('');
+    const [valor, setValor] = useState('');
+    const [instituicao, setInstituicao] = useState('');
+    const [cidade, setCidade] = useState('');
+    const [estado, setEstado] = useState('');
 
-  const [telefone, setTelefone] = useState("");
-  function doacaoTelefone(evento: React.ChangeEvent<HTMLInputElement>) {
-    setTelefone(evento.target.value);
-  }
+    // const handleIdChange = (e: ChangeEvent<HTMLInputElement>) => {
+    //         setId(e.target.value)
+    //     }
 
-  const [email, setEmail] = useState("");
-  function doacaoEmail(evento: React.ChangeEvent<HTMLInputElement>) {
-    setEmail(evento.target.value);
-  }
+    const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+            setName(e.target.value)
+        }
+    
+    const handleTelefoneChange = (e: ChangeEvent<HTMLInputElement>) => {
+            setTelefone(e.target.value)
+        }
 
-  const [valor, setValor] = useState("");
-  function doacaoValor(evento: React.ChangeEvent<HTMLInputElement>) {
-    setEmail(evento.target.value);
-  }
+    const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+            setEmail(e.target.value)
+        }
 
-  const [valorSelecionado, setValorSelecionado] = useState("");
-  const opcoes = ["Opção 1", "Opção 2", "Opção 3"];
+    const handleValorChange = (e: ChangeEvent<HTMLInputElement>) => {
+            setValor(e.target.value)
+        }
 
-  const handleChange = (event: any) => {
-    setValorSelecionado(event.target.value);
-  };
+    const handleInstituicaoChange = (e: ChangeEvent<HTMLInputElement>) => {
+            setInstituicao(e.target.value)
+        }
+
+    const handleCidadeChange = (e: ChangeEvent<HTMLInputElement>) => {
+            setCidade(e.target.value)
+        }
+
+
+    const handleEstadoChange = (e: ChangeEvent<HTMLInputElement>) => {
+            setEstado(e.target.value)
+        }
+
+
+
+    const AdicionarPost = async () => {
+        if (name && telefone && email && valor && instituicao && cidade && estado) {
+            let json = await api.AdicionarFormulario(name, telefone, email, valor, instituicao, cidade, estado);
+            if (json.data.id) {
+                alert('Formulario enviado com sucesso!')
+                setQueroAjudar((QueroAjudar) => [...QueroAjudar, json] );
+            } else {
+                alert('Erro ao enviar formulario!')
+            }
+        }
+    }
+
+     useEffect(() => {
+            // carregarFormulario();
+        }, []);
 
   return (
     <div className={style.divFormGeral}>
@@ -72,30 +107,30 @@ function FormAjuda() {
           <div className={style.linhaInputs}>
             <div>
               <label>Nome</label>
-              <input type="text" placeholder="Digite seu nome" />
+              <input type="text" onChange={handleNameChange} placeholder="Digite seu nome" />
             </div>
           </div>
           <div className={style.linhaInputs}>
             <div>
               <label>Telefone</label>
-              <input type="text" placeholder="Digite seu telefone" />
+              <input type="text" onChange={handleTelefoneChange} placeholder="Digite seu telefone" />
             </div>
             <div>
               <label>Email</label>
-              <input type="email" placeholder="Digite seu Email" />
+              <input type="email" onChange={handleEmailChange} placeholder="Digite seu Email" />
             </div>
           </div>
           <div className={style.linhaInputs}>
             <div>
               <label>Instituição</label>
-              <input type="text" placeholder="Qual Instituição" />
+              <input type="text" onChange={handleInstituicaoChange} placeholder="Qual Instituição" />
             </div>
           </div>
           <div className={style.linhaInputs}>
             <div>
               <label>Valor</label>
               <input
-                type="text"
+                type="text" onChange={handleValorChange}
                 placeholder="Digite o valor que deseja ajudar"
               />
             </div>
@@ -103,17 +138,17 @@ function FormAjuda() {
           <div className={style.linhaInputs}>
             <div>
               <label>Cidade</label>
-              <input type="text" placeholder="Digite o nome da sua cidade" />
+              <input type="text" onChange={handleCidadeChange} placeholder="Digite o nome da sua cidade" />
             </div>
             <div>
               <label>Estado</label>
-              <input type="text" placeholder="Digite o nome do seu estado" />
+              <input type="text" onChange={handleEstadoChange} placeholder="Digite o nome do seu estado" />
             </div>
           </div>
           <div className={style.checkboxGrupo}></div>
         </form>
         <div>
-          <button className={style.botaoEnviar}>Enviar</button>
+          <button className={style.botaoEnviar} onClick={AdicionarPost}>Enviar</button>
         </div>
         <img
           src={ilustracao}
