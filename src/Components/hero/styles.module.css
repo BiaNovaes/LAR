@@ -1,42 +1,46 @@
 /*Hero Home Inicio*/
-@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
-.homeInicio{
+.homeInicio {
   height: 100dvh;
-  background-image: url(../../assets/imagens/homeInicio1.png);
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
   background-size: cover;
+  background: linear-gradient(135deg,
+      #d4d3e327,
+      #a9dbec21,
+      #f2c49f3b);
 }
 
-.textoHome{
+.textoHome {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  margin:300px 200px 20px 200px;
+  margin: 300px 200px 20px 200px;
 }
- 
- .textoHome > h1{
-  font-family: "Kavoon", serif;
+
+.textoHome>h1 {
+  font-family: "Bangers", system-ui;
   display: flex;
   justify-content: center;
   font-size: 60px;
-  margin-bottom: 20px;
-} 
-
-.textoHome > span{
-  font-size: 30px;
-  font-family: sans-serif;
-  font-weight: normal;
-  margin-bottom: 20px;
 }
 
-.btoAjuda{
-  font-size: 30px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding: 5px 35px;
+.textoHome>span {
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: normal;
+  margin-bottom: 10px;
+  width: 700px;
+}
+
+.btoAjuda {
+  font-size: 25px;
+  font-family: "Bangers", system-ui;
+  height: 70px;
+  padding: 10px 20px;
   background-color: #da2727;
   color: aliceblue;
   border: none;
@@ -44,9 +48,19 @@
   cursor: pointer;
 }
 
-.btoAjuda:hover{
+.btoAjuda:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 8px 16px 32px rgba(0, 0, 0, 0.384);
+  box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.384);
   font-weight: normal;
   color: aliceblue;
+  background-color: #e62d2d;
+}
+
+.Imagem {
+  position: absolute;
+  width: 750px;
+  height: 750px;
+  top: 160px;
+  right: 90px;
+  z-index: 2;
 }

@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import style from './styles.module.css'
+import ImagemHome from '../../assets/imagens/HomeTeste.png'
 
 
 function HomeInicio(){
@@ -13,13 +14,14 @@ function HomeInicio(){
         <div className={style.homeInicio}>
             <div className={style.textoHome}>
                 <h1>
-                    Seja bem vindo(a). <br />
-                    Aqui é um espaço seguro.
+                    Você não está sozinho(a)
                 </h1>
-                <span>Estamos aqui para te apoiar.</span>
+                <span>O LAR é um espaço seguro e acolhedor com informações sobre saúde mental, tipos de abuso e recursos de apoio. Aqui você encontra orientação e caminhos para recomeçar.</span>
 
             <button onClick={handleNavegarPrecisoAjuda} className={style.btoAjuda}>Preciso de Ajuda</button>
             </div>
+
+            <img src={ImagemHome} className={style.Imagem} alt="Imagem Home" />
         </div>
     )
 }

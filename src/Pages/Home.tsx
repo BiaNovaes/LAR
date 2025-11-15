@@ -1,4 +1,6 @@
+import BotaoSOS from '../Components/Botao/botao';
 import CabecalhoHome from '../Components/CabecalhoHome';
+import CartaoHome from '../Components/CartaoHome';
 import HomeInicio from '../Components/hero';
 import MenuCards from '../Components/MenuCards';
 import PerguntasFrequentes from '../Components/perguntasFrequentes';
@@ -15,8 +17,10 @@ function Home () {
         <div>
     <CabecalhoHome/>
     <HomeInicio/>
-    <MenuCards/>
-    <TiposAbusos/>
+    <BotaoSOS/>
+    <CartaoHome/>
+    {/* <MenuCards/>
+    <TiposAbusos/> */}
     <PerguntasFrequentes/>
     <RodapeHome/>
       

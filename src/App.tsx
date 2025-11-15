@@ -12,6 +12,7 @@ import "./App.css";
 import Instituicao from "./Pages/Instituicao.tsx";
 import InstituicaoAjuda from "./Pages/InstituicaoPrecisoDeAjuda.tsx";
 import FaleConosco from "./Pages/FaleConosco.tsx";
+import BotaoSOS from "./Components/Botao/botao.tsx";
 
 function App() {
   return (
@@ -24,10 +25,11 @@ function App() {
       <Route path="/queroajudar" element={<FormAjuda />} />
       <Route path="/precisodeajuda" element={<FormQueroAjuda />} />
       <Route path="/login" element={<Login />} />
-      <Route path="TiposAbusos" element={<TiposDeAbuso />} />
+      <Route path="/TiposAbusos" element={<TiposDeAbuso />} />
       <Route path="/instituicao" element={<Instituicao />} />
       <Route path="/instituicao-ajuda" element={<InstituicaoAjuda />} />
       <Route path="/faleConosco" element={<FaleConosco/>}/>
+      <Route path="/BotaoSOS" element={<BotaoSOS/>}/>
     </Routes>
   );
 }
