@@ -49,11 +49,11 @@ function FaleConosco() {
     const AdicionarFaleConosco = async () => {
         if (name && telefone && email && endereco && assunto && mensagem) {
             let json = await api.AdicionarFaleConosco(name, telefone, email, endereco, assunto, mensagem);
-            if (json.data.id) {
-                alert('Formulario enviado com sucesso!')
-                setFaleConosco((FaleConosco) => [...FaleConosco, json]);
+            if (json?.message === 'Formulario enviado com sucesso!') {
+              alert(json.message);
+              setFaleConosco((FaleConosco) => [...FaleConosco, json]);
             } else {
-                alert('Erro ao enviar formulario!')
+              alert('Erro ao enviar formulario!');
             }
         }
     }
@@ -70,7 +70,7 @@ function FaleConosco() {
             <img src={FaleConoscoIMG} className={style.imagem} />
 
             <div className={style.Conteudo}>
-                <form className={style.form}>
+                {/* <form className={style.form}> */}
                     <div className={style.linhaInputs}>
                         <div>
                             <label>Nome</label>
@@ -111,7 +111,7 @@ function FaleConosco() {
                     <div>
                         <button className={style.botaoEnviar} onClick={AdicionarFaleConosco} >Enviar</button>
                     </div>
-                </form>
+                {/* </form> */}
 
             </div>
             

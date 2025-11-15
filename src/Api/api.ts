@@ -106,15 +106,15 @@ export const api = {
     },
 
     AdicionarFaleConosco: async (name: string, telefone: string, email:string, endereco: string, assunto: string, mensagem:string) => {
-        let response = await fetch('http://localhost:3000/faleConosco/', {
+        let response = await fetch('http://localhost:3000/FormularioFaleConosco/', {
             method: 'POST',
             body: JSON.stringify({
-                name: name,
-                telefone: telefone,
-                email: email,
-                endereco: endereco,
-                assunto: assunto,
-                mensagem: mensagem
+                NAME: name,
+                TELEFONE: telefone,
+                EMAIL: email,
+                ENDERECO: endereco,
+                ASSUNTO: assunto,
+                MENSAGEM: mensagem
             }),
             headers: {
                 'Content-type' : 'application/json'
@@ -123,6 +123,7 @@ export const api = {
         let json = await response.json();
         return json;
     }
+
 }
 
 
