@@ -6,22 +6,22 @@ import PerguntasFrequentes from '../Components/perguntasFrequentes';
 import RodapeHome from '../Components/RodapeHome';
 
 
-function Home () {
+function Home() {
 
- 
 
-    return(
-        
+
+    return (
+
         <div>
-    <CabecalhoHome/>
-    <HomeInicio/>
-    <BotaoSOS/>
-    <CartaoHome/>
-    {/* <MenuCards/>
+            <CabecalhoHome />
+            <HomeInicio />
+            <BotaoSOS />
+            <CartaoHome />
+            {/* <MenuCards/>
     <TiposAbusos/> */}
-    <PerguntasFrequentes/>
-    <RodapeHome/>
-      
+            <PerguntasFrequentes />
+            <RodapeHome />
+
         </div>
     )
 }

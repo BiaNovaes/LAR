@@ -19,7 +19,7 @@ export default function InfoSection() {
 
             <div className={style.cardsContainer}>
 
-                <Link to="/tipos-de-abuso" className={style.card}>
+                <Link to="/SaudeMental" className={style.card}>
                     <span className={style.circle}>
                         <img src={saudeImg} alt="Saúde Mental" />
                     </span>
@@ -29,12 +29,12 @@ export default function InfoSection() {
                     </p>
                 </Link>
 
-                
+
                 <HashLink to="/TiposAbusos#TiposAbusos" className={style.card}>
                     <span className={style.circle}>
                         <img src={AbusosImg} alt="Tipo Abuso" />
                     </span>
-                    <h3>Tipo de Abuso</h3>
+                    <h3>Tipos de Abusos</h3>
                     <p>
                         Entenda os diferentes tipos de abuso e como reconhecer situações de risco.
                     </p>
