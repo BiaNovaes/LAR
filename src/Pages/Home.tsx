@@ -8,22 +8,22 @@ import RodapeHome from '../Components/RodapeHome';
 import TiposAbusos from '../Components/tiposAbusosHome';
 
 
-function Home () {
+function Home() {
 
- 
 
-    return(
-        
+
+    return (
+
         <div>
-    <CabecalhoHome/>
-    <HomeInicio/>
-    <BotaoSOS/>
-    <CartaoHome/>
-    {/* <MenuCards/>
+            <CabecalhoHome />
+            <HomeInicio />
+            <BotaoSOS />
+            <CartaoHome />
+            {/* <MenuCards/>
     <TiposAbusos/> */}
-    <PerguntasFrequentes/>
-    <RodapeHome/>
-      
+            <PerguntasFrequentes />
+            <RodapeHome />
+
         </div>
     )
 }

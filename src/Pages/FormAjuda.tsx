@@ -5,78 +5,79 @@ import { Link } from "react-router-dom";
 import type { QueroAjudar } from "../types/queroAjudar";
 import { useEffect, type ChangeEvent } from "react";
 import { api } from "../Api/api";
+import BotaoSOS from "../Components/Botao/botao";
 
 
 function FormAjuda() {
-  
-   const [_, setQueroAjudar] = useState<QueroAjudar[]>([]);
-    // const [loading, setLoading] = useState(false);
 
-    // const [id, setId] = useState('');
-    const [name, setName] = useState('');
-    const [telefone, setTelefone] = useState('');
-    const [email, setEmail] = useState('');
-    const [valor, setValor] = useState('');
-    const [instituicao, setInstituicao] = useState('');
-    const [cidade, setCidade] = useState('');
-    const [estado, setEstado] = useState('');
+  const [_, setQueroAjudar] = useState<QueroAjudar[]>([]);
+  // const [loading, setLoading] = useState(false);
 
-    // const handleIdChange = (e: ChangeEvent<HTMLInputElement>) => {
-    //         setId(e.target.value)
-    //     }
+  // const [id, setId] = useState('');
+  const [name, setName] = useState('');
+  const [telefone, setTelefone] = useState('');
+  const [email, setEmail] = useState('');
+  const [valor, setValor] = useState('');
+  const [instituicao, setInstituicao] = useState('');
+  const [cidade, setCidade] = useState('');
+  const [estado, setEstado] = useState('');
 
-    const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setName(e.target.value)
-        }
-    
-    const handleTelefoneChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setTelefone(e.target.value)
-        }
+  // const handleIdChange = (e: ChangeEvent<HTMLInputElement>) => {
+  //         setId(e.target.value)
+  //     }
 
-    const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setEmail(e.target.value)
-        }
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value)
+  }
 
-    const handleValorChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setValor(e.target.value)
-        }
+  const handleTelefoneChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setTelefone(e.target.value)
+  }
 
-    const handleInstituicaoChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setInstituicao(e.target.value)
-        }
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value)
+  }
 
-    const handleCidadeChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setCidade(e.target.value)
-        }
+  const handleValorChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setValor(e.target.value)
+  }
 
+  const handleInstituicaoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setInstituicao(e.target.value)
+  }
 
-    const handleEstadoChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setEstado(e.target.value)
-        }
+  const handleCidadeChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setCidade(e.target.value)
+  }
 
 
+  const handleEstadoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setEstado(e.target.value)
+  }
 
-    const AdicionarPost = async () => {
-        if (name && telefone && email && valor && instituicao && cidade && estado) {
-            let json = await api.AdicionarFormulario(name, telefone, email, valor, instituicao, cidade, estado);
-            // if (json.data.id) {
-            //     alert('Formulario enviado com sucesso!')
-            //     setQueroAjudar((QueroAjudar) => [...QueroAjudar, json] );
-            // } else {
-            //     alert('Erro ao enviar formulario!')
-            // }
-            if (json?.message === 'Formulario enviado com sucesso!') {
-              alert(json.message);
-              setQueroAjudar((QueroAjudar) => [...QueroAjudar, json]);
-            } else {
-              alert('Erro ao enviar formulario!');
-            }
-        }
+
+
+  const AdicionarPost = async () => {
+    if (name && telefone && email && valor && instituicao && cidade && estado) {
+      let json = await api.AdicionarFormulario(name, telefone, email, valor, instituicao, cidade, estado);
+      // if (json.data.id) {
+      //     alert('Formulario enviado com sucesso!')
+      //     setQueroAjudar((QueroAjudar) => [...QueroAjudar, json] );
+      // } else {
+      //     alert('Erro ao enviar formulario!')
+      // }
+      if (json?.message === 'Formulario enviado com sucesso!') {
+        alert(json.message);
+        setQueroAjudar((QueroAjudar) => [...QueroAjudar, json]);
+      } else {
+        alert('Erro ao enviar formulario!');
+      }
     }
+  }
 
-     useEffect(() => {
-            // carregarFormulario();
-        }, []);
+  useEffect(() => {
+    // carregarFormulario();
+  }, []);
 
   return (
     <div className={style.divFormGeral}>
@@ -162,6 +163,7 @@ function FormAjuda() {
           className={style.ilustracaoDireita}
         />
       </div>
+      <BotaoSOS />
     </div>
   );
 }

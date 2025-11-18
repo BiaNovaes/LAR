@@ -4,154 +4,155 @@ import ilustracao from "../assets/imagens/Formulario.jpg";
 import type { PrecisoAjuda } from "../types/precisoAjuda";
 import { useEffect, useState, type ChangeEvent } from "react";
 import { api } from "../Api/api";
+import BotaoSOS from "../Components/Botao/botao";
 
 function FormQueroAjuda() {
 
-    const [_, setPrecisoAjuda] = useState<PrecisoAjuda[]>([]);
-    // const [loading, setLoading] = useState(false);
+  const [_, setPrecisoAjuda] = useState<PrecisoAjuda[]>([]);
+  // const [loading, setLoading] = useState(false);
 
-    // const [id, setId] = useState('');
-    const [name, setName] = useState('');
-    const [telefone, setTelefone] = useState('');
-    const [email, setEmail] = useState('');
-    const [assunto, setAssunto] = useState('');
-    const [instituicao, setInstituicao] = useState('');
-    const [cidade, setCidade] = useState('');
-    const [estado, setEstado] = useState('');
-    
-    // Criação dos imputs checkbox
+  // const [id, setId] = useState('');
+  const [name, setName] = useState('');
+  const [telefone, setTelefone] = useState('');
+  const [email, setEmail] = useState('');
+  const [assunto, setAssunto] = useState('');
+  const [instituicao, setInstituicao] = useState('');
+  const [cidade, setCidade] = useState('');
+  const [estado, setEstado] = useState('');
 
-    const [tremor, setTremor] = useState(false);
-    const [cansaco, setCansaco] = useState(false);
-    const [desanimo, setDesanimo] = useState(false);
-    const [faltaAr, setFaltaAr] = useState(false);
-    const [agonia, setAgonia] = useState(false);
-    const [faltaFoco, setFaltaFoco] = useState(false);
-    const [alteracaoHumor, setAlteracaoHumor] = useState(false);
-    const [sensacaoDesconexao, setSensacaoDesconexao] = useState(false);
-    const [preocupacaoPeso, setPreocupacaoPeso] = useState(false);
-    const [perdaInteresse, setPerdaInteresse] = useState(false);
-    const [abusoPsicologico, setAbusoPsicologico] = useState(false);
-    const [abusoFisico, setAbusoFisico] = useState(false);
-    const [abusoSexual, setAbusoSexual] = useState(false);
-    const [abusoPatrimonial, setAbusoPatrimonial] = useState(false);
-    const [abusoMoral, setAbusoMoral] = useState(false);
+  // Criação dos imputs checkbox
 
-
-
-    // const handleIdChange = (e: ChangeEvent<HTMLInputElement>) => {
-    //         setId(e.target.value)
-    //     }
-
-    const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setName(e.target.value)
-        }
-    
-    const handleTelefoneChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setTelefone(e.target.value)
-        }
-
-    const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setEmail(e.target.value)
-        }
-
-    const handleAssuntoChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setAssunto(e.target.value)
-        }
-
-    const handleInstituicaoChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setInstituicao(e.target.value)
-        }
-
-    const handleCidadeChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setCidade(e.target.value)
-        }
+  const [tremor, setTremor] = useState(false);
+  const [cansaco, setCansaco] = useState(false);
+  const [desanimo, setDesanimo] = useState(false);
+  const [faltaAr, setFaltaAr] = useState(false);
+  const [agonia, setAgonia] = useState(false);
+  const [faltaFoco, setFaltaFoco] = useState(false);
+  const [alteracaoHumor, setAlteracaoHumor] = useState(false);
+  const [sensacaoDesconexao, setSensacaoDesconexao] = useState(false);
+  const [preocupacaoPeso, setPreocupacaoPeso] = useState(false);
+  const [perdaInteresse, setPerdaInteresse] = useState(false);
+  const [abusoPsicologico, setAbusoPsicologico] = useState(false);
+  const [abusoFisico, setAbusoFisico] = useState(false);
+  const [abusoSexual, setAbusoSexual] = useState(false);
+  const [abusoPatrimonial, setAbusoPatrimonial] = useState(false);
+  const [abusoMoral, setAbusoMoral] = useState(false);
 
 
-    const handleEstadoChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setEstado(e.target.value)
-        }
 
-// Criação dos handlers checkbox
+  // const handleIdChange = (e: ChangeEvent<HTMLInputElement>) => {
+  //         setId(e.target.value)
+  //     }
 
-    const handleTremorChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setTremor(e.target.checked)
-        }
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value)
+  }
 
-    const handleCansacoChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setCansaco(e.target.checked)
-        }
+  const handleTelefoneChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setTelefone(e.target.value)
+  }
 
-    const handleDesanimoChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setDesanimo(e.target.checked)
-        }
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value)
+  }
 
-    const handleFaltaArChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setFaltaAr(e.target.checked)
-        }
+  const handleAssuntoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAssunto(e.target.value)
+  }
 
-    const handleAgoniaChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setAgonia(e.target.checked)
-        }
+  const handleInstituicaoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setInstituicao(e.target.value)
+  }
 
-    const handleFaltaFocoChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setFaltaFoco(e.target.checked)
-        }
+  const handleCidadeChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setCidade(e.target.value)
+  }
 
-    const handleAlteracaoHumorChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setAlteracaoHumor(e.target.checked)
-        }
 
-    const handleSensacaoDesconexaoChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setSensacaoDesconexao(e.target.checked)
-        }
+  const handleEstadoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setEstado(e.target.value)
+  }
 
-    const handlePreocupacaoPesoChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setPreocupacaoPeso(e.target.checked)
-        }
+  // Criação dos handlers checkbox
 
-    const handlePerdaInteresseChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setPerdaInteresse(e.target.checked)
-        }
-      
-    const handleAbusoPsicologicoChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setAbusoPsicologico(e.target.checked)
-        }
+  const handleTremorChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setTremor(e.target.checked)
+  }
 
-    const handleAbusoFisicoChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setAbusoFisico(e.target.checked)
-        }
+  const handleCansacoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setCansaco(e.target.checked)
+  }
 
-    const handleAbusoSexualChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setAbusoSexual(e.target.checked)
-        }
+  const handleDesanimoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setDesanimo(e.target.checked)
+  }
 
-    const handleAbusoPatrimonialChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setAbusoPatrimonial(e.target.checked)
-        }
+  const handleFaltaArChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setFaltaAr(e.target.checked)
+  }
 
-    const handleAbusoMoralChange = (e: ChangeEvent<HTMLInputElement>) => {
-            setAbusoMoral(e.target.checked)
-        }
+  const handleAgoniaChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAgonia(e.target.checked)
+  }
 
-    const AdicionarPost = async () => {
-        if (name && telefone && email && assunto && instituicao && cidade && estado) { 
-            let json = await api.AdicionarFormularioPrecisoAjuda(name, telefone, email, assunto, instituicao, cidade, estado, tremor, cansaco, 
-                                                                desanimo, faltaAr, agonia, faltaFoco, alteracaoHumor, sensacaoDesconexao, preocupacaoPeso, 
-                                                                perdaInteresse, abusoPsicologico, abusoFisico, abusoSexual, abusoPatrimonial, abusoMoral);
+  const handleFaltaFocoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setFaltaFoco(e.target.checked)
+  }
 
-            if (json?.message === 'Formulario enviado com sucesso!') {
-              alert(json.message);
-              setPrecisoAjuda((PrecisoAjuda) => [...PrecisoAjuda, json]);
-            } else {
-              alert('Erro ao enviar formulario!');
-            }
-        }
+  const handleAlteracaoHumorChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAlteracaoHumor(e.target.checked)
+  }
+
+  const handleSensacaoDesconexaoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setSensacaoDesconexao(e.target.checked)
+  }
+
+  const handlePreocupacaoPesoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setPreocupacaoPeso(e.target.checked)
+  }
+
+  const handlePerdaInteresseChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setPerdaInteresse(e.target.checked)
+  }
+
+  const handleAbusoPsicologicoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAbusoPsicologico(e.target.checked)
+  }
+
+  const handleAbusoFisicoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAbusoFisico(e.target.checked)
+  }
+
+  const handleAbusoSexualChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAbusoSexual(e.target.checked)
+  }
+
+  const handleAbusoPatrimonialChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAbusoPatrimonial(e.target.checked)
+  }
+
+  const handleAbusoMoralChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAbusoMoral(e.target.checked)
+  }
+
+  const AdicionarPost = async () => {
+    if (name && telefone && email && assunto && instituicao && cidade && estado) {
+      let json = await api.AdicionarFormularioPrecisoAjuda(name, telefone, email, assunto, instituicao, cidade, estado, tremor, cansaco,
+        desanimo, faltaAr, agonia, faltaFoco, alteracaoHumor, sensacaoDesconexao, preocupacaoPeso,
+        perdaInteresse, abusoPsicologico, abusoFisico, abusoSexual, abusoPatrimonial, abusoMoral);
+
+      if (json?.message === 'Formulario enviado com sucesso!') {
+        alert(json.message);
+        setPrecisoAjuda((PrecisoAjuda) => [...PrecisoAjuda, json]);
+      } else {
+        alert('Erro ao enviar formulario!');
+      }
     }
+  }
 
-     useEffect(() => {
-            // carregarFormulario();
-        }, []);
+  useEffect(() => {
+    // carregarFormulario();
+  }, []);
 
 
 
@@ -292,6 +293,8 @@ function FormQueroAjuda() {
           className={style.ilustracaoDireita}
         />
       </div>
+
+      <BotaoSOS />
     </div>
   );
 }
