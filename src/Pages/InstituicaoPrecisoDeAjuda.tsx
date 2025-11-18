@@ -101,7 +101,7 @@ function InstituicaoAjuda() {
         <h1 className={style.instituicaoTitulo}>Você não está sozinho</h1>
         <h2 className={style.instituicaoSubtitulo}>Pequenos passos podem transformar sua vida.</h2>
         <div className={style.cardsGrid}>
-          {cards.map((card, idx) => (
+          {cards.map((card, _idx) => (
             <div
               key={card.titulo}
               className={style.card}
