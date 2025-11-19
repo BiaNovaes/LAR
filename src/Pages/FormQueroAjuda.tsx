@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import style from "../Style/saulo.module.css";
-import ilustracao from "../assets/imagens/Formulario.jpg";
+import style from "../Style/FormQueroAjudar.module.css";
 import type { PrecisoAjuda } from "../types/precisoAjuda";
 import { useEffect, useState, type ChangeEvent } from "react";
 import { api } from "../Api/api";
 import BotaoSOS from "../Components/Botao/botao";
+import CabecalhoHome from "../Components/CabecalhoHome";
+import RodapeHome from "../Components/RodapeHome";
 
 function FormQueroAjuda() {
 
@@ -157,144 +158,151 @@ function FormQueroAjuda() {
 
 
   return (
-    <div className={style.divFormGeral}>
-      <div className={style.divLateral}>
-        <h1>Olá!</h1>
-        <hr />
-        <p>Estamos felizes por você estar dando esse grande passo.</p>
-        <p>
-          Calma, tudo vai melhorar só precisamos que você responda o formulário
-          para entendermos melhor como podemos te ajudar.
-        </p>
-        <p>
-          Em casos de emergência para assuntos psicológicos ligue para{" "}
-          <strong>188</strong> ou <strong>190</strong>.
-        </p>
-        <p>
-          Em casos de emergência para abusos ligue para <strong>188</strong> ou{" "}
-          <strong>190</strong>.
-        </p>
-      </div>
-      <div className={style.divFormBto}>
-        <Link to={"/"} className={style.divBto}>
-          Home
-        </Link>
-        <Link to={"/queroajudar"} className={style.divBto}>
-          Quero Ajudar
-        </Link>
-        <Link to={"/login"} className={style.divBto}>
-          Login
-        </Link>
-      </div>
-      <div className={style.divConteudo}>
-        <form className={style.formAjuda}>
-          <div className={style.linhaInputs}>
-            <div>
-              <label>Nome</label>
-              <input type="text" onChange={handleNameChange} placeholder="Digite seu nome" />
+    <div className={style.body}>
+      <CabecalhoHome />
+      <div className={style.divFormGeral}>
+        <div className={style.divLateral}>
+          <h1>Olá!</h1>
+
+          <div className={style.sidebar}>
+            <h2>Olá!</h2>
+
+            <div className={style.alertEmergency}>
+              <strong> Em caso de emergência</strong>
+              <p>
+                Em caso de emergência
+                Se você está em perigo imediato ou tendo pensamentos suicidas, ligue para os serviços de emergência.</p>
+            </div>
+
+            <div className={style.alertInfo}>
+              <strong>CVV - 188</strong>
+              <p>
+                Centro de Valorização da Vida. Apoio emocional e prevenção do suicídio. Atendimento 24h, gratuito e sigiloso.
+              </p>
+            </div>
+
+            <div className={style.alertInfo}>
+              <strong>Disque 180</strong>
+              <p>
+                Central de Atendimento à Mulher. Acolhimento e orientação para mulheres em situação de violência.
+              </p>
             </div>
           </div>
-          <div className={style.linhaInputs}>
-            <div>
-              <label>Telefone</label>
-              <input type="text" onChange={handleTelefoneChange} placeholder="Digite seu telefone" />
-            </div>
-            <div>
-              <label>Email</label>
-              <input type="email" onChange={handleEmailChange} placeholder="Digite seu Email" />
-            </div>
-          </div>
-          <div className={style.linhaInputs}>
-            <div>
-              <label>Assunto</label>
-              <input type="text" onChange={handleAssuntoChange} placeholder="Digite a doença" />
-            </div>
-          </div>
-          <div className={style.linhaInputs}>
-            <div>
-              <label>Instituição</label>
-              <input type="text" onChange={handleInstituicaoChange} placeholder="Qual instituição" />
-            </div>
-          </div>
-          <div className={style.linhaInputs}>
-            <div>
-              <label>Cidade</label>
-              <input type="text" onChange={handleCidadeChange} placeholder="Digite o nome da sua cidade" />
-            </div>
-            <div>
-              <label>Estado</label>
-              <input type="text" onChange={handleEstadoChange} placeholder="Digite o nome do seu estado" />
-            </div>
-          </div>
-          <div className={style.checkboxGrupo}>
-            <p>
-              <strong>O que você sente?</strong>
-            </p>
-            <br />
-            <div className={style.checkboxColunas}>
-              <div>
-                <label>
-                  <input type="checkbox" onChange={handleTremorChange} /> Tremor
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handleCansacoChange} /> Cansaço
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handleDesanimoChange} /> Desânimo
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handleFaltaArChange} /> Falta de ar
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handleAgoniaChange} /> Agonia
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handleFaltaFocoChange} /> Falta de foco
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handleAlteracaoHumorChange} /> Alteração de humor
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handleSensacaoDesconexaoChange} /> Sensação de desconexão
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handlePreocupacaoPesoChange} /> Preocupação com peso
-                </label>
-              </div>
-              <div>
-                <label>
-                  <input type="checkbox" onChange={handlePerdaInteresseChange} /> Perda de interesse
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handleAbusoPsicologicoChange} /> Sofri abuso psicológico
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handleAbusoFisicoChange} /> Sofri abuso físico
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handleAbusoSexualChange} /> Sofri abuso sexual
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handleAbusoPatrimonialChange} /> Sofri abuso patrimonial
-                </label>
-                <label>
-                  <input type="checkbox" onChange={handleAbusoMoralChange} /> Sofri abuso moral
-                </label>
-              </div>
-            </div>
-          </div>
-        </form>
-        <div>
-          <button className={style.botaoEnviar} onClick={AdicionarPost} >Enviar</button>
         </div>
-        <img
+
+        <div className={style.divConteudo}>
+          <form className={style.formAjuda}>
+            <div className={style.linhaInputs}>
+              <div>
+                <label>Nome</label>
+                <input type="text" onChange={handleNameChange} placeholder="Digite seu nome" />
+              </div>
+            </div>
+            <div className={style.linhaInputs}>
+              <div>
+                <label>Telefone</label>
+                <input type="text" onChange={handleTelefoneChange} placeholder="Digite seu telefone" />
+              </div>
+              <div>
+                <label>Email</label>
+                <input type="email" onChange={handleEmailChange} placeholder="Digite seu Email" />
+              </div>
+            </div>
+            <div className={style.linhaInputs}>
+              <div>
+                <label>Assunto</label>
+                <input type="text" onChange={handleAssuntoChange} placeholder="Digite a doença" />
+              </div>
+            </div>
+            <div className={style.linhaInputs}>
+              <div>
+                <label>Instituição</label>
+                <input type="text" onChange={handleInstituicaoChange} placeholder="Qual instituição" />
+              </div>
+            </div>
+            <div className={style.linhaInputs}>
+              <div>
+                <label>Cidade</label>
+                <input type="text" onChange={handleCidadeChange} placeholder="Digite o nome da sua cidade" />
+              </div>
+              <div>
+                <label>Estado</label>
+                <input type="text" onChange={handleEstadoChange} placeholder="Digite o nome do seu estado" />
+              </div>
+            </div>
+            <div className={style.checkboxGrupo}>
+              <p>
+                <strong>O que você sente?</strong>
+              </p>
+              <br />
+              <div className={style.checkboxColunas}>
+                <div>
+                  <label>
+                    <input type="checkbox" onChange={handleTremorChange} /> Tremor
+                  </label>
+                  <label>
+                    <input type="checkbox" onChange={handleCansacoChange} /> Cansaço
+                  </label>
+                  <label>
+                    <input type="checkbox" onChange={handleDesanimoChange} /> Desânimo
+                  </label>
+                  <label>
+                    <input type="checkbox" onChange={handleFaltaArChange} /> Falta de ar
+                  </label>
+                  <label>
+                    <input type="checkbox" onChange={handleAgoniaChange} /> Agonia
+                  </label>
+                  <label>
+                    <input type="checkbox" onChange={handleFaltaFocoChange} /> Falta de foco
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <input type="checkbox" onChange={handleAlteracaoHumorChange} /> Alteração de humor
+                  </label>
+                  <label>
+                    <input type="checkbox" onChange={handleSensacaoDesconexaoChange} /> Sensação de desconexão
+                  </label>
+                  <label>
+                    <input type="checkbox" onChange={handlePreocupacaoPesoChange} /> Preocupação com peso
+                  </label>
+                  <label>
+                    <input type="checkbox" onChange={handlePerdaInteresseChange} /> Perda de interesse
+                  </label>
+                  <label>
+                    <input type="checkbox" onChange={handleAbusoPsicologicoChange} /> Sofri abuso psicológico
+                  </label>
+                  <label>
+                    <input type="checkbox" onChange={handleAbusoFisicoChange} /> Sofri abuso físico
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <input type="checkbox" onChange={handleAbusoSexualChange} /> Sofri abuso sexual
+                  </label>
+                  <label>
+                    <input type="checkbox" onChange={handleAbusoPatrimonialChange} /> Sofri abuso patrimonial
+                  </label>
+                  <label>
+                    <input type="checkbox" onChange={handleAbusoMoralChange} /> Sofri abuso moral
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div>
+            <button className={style.botaoEnviar} onClick={AdicionarPost} >Enviar</button>
+          </div>
+          {/* <img
           src={ilustracao}
           alt="Ilustração"
           className={style.ilustracaoDireita}
-        />
-      </div>
+        /> */}
+        </div>
 
-      <BotaoSOS />
+        <BotaoSOS />
+      </div>
+      <RodapeHome />
     </div>
   );
 }
