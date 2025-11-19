@@ -60,12 +60,6 @@ function FormAjuda() {
   const AdicionarPost = async () => {
     if (name && telefone && email && valor && instituicao && cidade && estado) {
       let json = await api.AdicionarFormulario(name, telefone, email, valor, instituicao, cidade, estado);
-      // if (json.data.id) {
-      //     alert('Formulario enviado com sucesso!')
-      //     setQueroAjudar((QueroAjudar) => [...QueroAjudar, json] );
-      // } else {
-      //     alert('Erro ao enviar formulario!')
-      // }
       if (json?.message === 'Formulario enviado com sucesso!') {
         alert(json.message);
         setQueroAjudar((QueroAjudar) => [...QueroAjudar, json]);
@@ -78,6 +72,7 @@ function FormAjuda() {
   useEffect(() => {
     // carregarFormulario();
   }, []);
+
 
   return (
     <div className={style.divFormGeral}>
@@ -127,7 +122,7 @@ function FormAjuda() {
               <input type="email" onChange={handleEmailChange} placeholder="Digite seu Email" />
             </div>
           </div>
-          <div className={style.linhaInputs}>
+          <div className={style.linhaInputs1}>
             <div>
               <label>Instituição</label>
               <input type="text" onChange={handleInstituicaoChange} placeholder="Qual Instituição" />
