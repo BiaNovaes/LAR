@@ -1,11 +1,14 @@
 import { useState } from "react";
-import style from "../Style/saulo.module.css";
+import style from "../Style/FormPrecisoAjuda.module.css";
 import ilustracao from "../assets/imagens/Formulario.jpg";
 import { Link } from "react-router-dom";
 import type { QueroAjudar } from "../types/queroAjudar";
 import { useEffect, type ChangeEvent } from "react";
 import { api } from "../Api/api";
 import BotaoSOS from "../Components/Botao/botao";
+import Cabecalho from "../Components/Cabecalho";
+import CabecalhoHome from "../Components/CabecalhoHome";
+import RodapeHome from "../Components/RodapeHome";
 
 
 function FormAjuda() {
@@ -75,90 +78,88 @@ function FormAjuda() {
 
 
   return (
-    <div className={style.divFormGeral}>
-      <div className={style.divLateral}>
-        <h1>Olá!</h1>
-        <hr />
-        <p>Estamos felizes por você estar dando esse grande passo.</p>
-        <p>
-          Calma, tudo vai melhorar só precisamos que você responda o formulário
-          para entendermos melhor como podemos te ajudar.
-        </p>
-        <p>
-          Em casos de emergência para assuntos psicológicos ligue para{" "}
-          <strong>188</strong> ou <strong>190</strong>.
-        </p>
-        <p>
-          Em casos de emergência para abusos ligue para <strong>188</strong> ou{" "}
-          <strong>190</strong>.
-        </p>
-      </div>
-      <div className={style.divFormBto}>
-        <Link to={"/"} className={style.divBto}>
-          Home
-        </Link>
-        <Link to={"/precisodeajuda"} className={style.divBto}>
-          Preciso de ajuda
-        </Link>
-        <Link to={"/login"} className={style.divBto}>
-          Login
-        </Link>
-      </div>
-      <div className={style.divConteudo}>
-        <form className={style.formAjuda}>
-          <div className={style.linhaInputs}>
-            <div>
-              <label>Nome</label>
-              <input type="text" onChange={handleNameChange} placeholder="Digite seu nome" />
-            </div>
+    <div className={style.body}>
+      <CabecalhoHome />
+      <div className={style.divFormGeral}>
+        <div className={style.sidebar}>
+          <h2>Olá!</h2>
+
+          <div className={style.alertInfo}>
+            <strong>Antes de continuar</strong>
+            <p>
+              Se você tiver dúvidas sobre como funciona o envio da doação ou sobre as
+              instituições listadas, nossa equipe está disponível para ajudar.
+            </p>
           </div>
-          <div className={style.linhaInputs}>
-            <div>
-              <label>Telefone</label>
-              <input type="text" onChange={handleTelefoneChange} placeholder="Digite seu telefone" />
-            </div>
-            <div>
-              <label>Email</label>
-              <input type="email" onChange={handleEmailChange} placeholder="Digite seu Email" />
-            </div>
+
+          <div className={style.alertInfo}>
+            <strong>Instituições parceiras</strong>
+            <p>
+              Aqui você encontra organizações confiáveis que trabalham diariamente
+              para transformar vidas.
+            </p>
           </div>
-          <div className={style.linhaInputs1}>
-            <div>
-              <label>Instituição</label>
-              <input type="text" onChange={handleInstituicaoChange} placeholder="Qual Instituição" />
-            </div>
+
+          <div className={style.alertInfo}>
+            <strong>Por que doar?</strong>
+            <p>
+              Sua ajuda permite que nosso trabalho continue impactando vidas. Mesmo
+              pequenas contribuições fazem uma grande diferença.
+            </p>
           </div>
-          <div className={style.linhaInputs}>
-            <div>
-              <label>Valor</label>
-              <input
-                type="text" onChange={handleValorChange}
-                placeholder="Digite o valor que deseja ajudar"
-              />
-            </div>
-          </div>
-          <div className={style.linhaInputs}>
-            <div>
-              <label>Cidade</label>
-              <input type="text" onChange={handleCidadeChange} placeholder="Digite o nome da sua cidade" />
-            </div>
-            <div>
-              <label>Estado</label>
-              <input type="text" onChange={handleEstadoChange} placeholder="Digite o nome do seu estado" />
-            </div>
-          </div>
-          <div className={style.checkboxGrupo}></div>
-        </form>
-        <div>
-          <button className={style.botaoEnviar} onClick={AdicionarPost}>Enviar</button>
         </div>
-        <img
-          src={ilustracao}
-          alt="Ilustração"
-          className={style.ilustracaoDireita}
-        />
+        <div className={style.divConteudo}>
+          <form className={style.formAjuda}>
+            <div className={style.linhaInputs}>
+              <div>
+                <label>Nome</label>
+                <input type="text" onChange={handleNameChange} placeholder="Digite seu nome" />
+              </div>
+            </div>
+            <div className={style.linhaInputs}>
+              <div>
+                <label>Telefone</label>
+                <input type="text" onChange={handleTelefoneChange} placeholder="Digite seu telefone" />
+              </div>
+              <div>
+                <label>Email</label>
+                <input type="email" onChange={handleEmailChange} placeholder="Digite seu Email" />
+              </div>
+            </div>
+            <div className={style.linhaInputs}>
+              <div>
+                <label>Instituição</label>
+                <input type="text" onChange={handleInstituicaoChange} placeholder="Qual Instituição" />
+              </div>
+            </div>
+            <div className={style.linhaInputs}>
+              <div>
+                <label>Valor</label>
+                <input
+                  type="text" onChange={handleValorChange}
+                  placeholder="Digite o valor que deseja ajudar"
+                />
+              </div>
+            </div>
+            <div className={style.linhaInputs}>
+              <div>
+                <label>Cidade</label>
+                <input type="text" onChange={handleCidadeChange} placeholder="Digite o nome da sua cidade" />
+              </div>
+              <div>
+                <label>Estado</label>
+                <input type="text" onChange={handleEstadoChange} placeholder="Digite o nome do seu estado" />
+              </div>
+            </div>
+            <div className={style.checkboxGrupo}></div>
+          </form>
+          <div>
+            <button className={style.botaoEnviar} onClick={AdicionarPost}>Enviar</button>
+          </div>
+        </div>
+        <BotaoSOS />
       </div>
-      <BotaoSOS />
+      <RodapeHome/>
     </div>
   );
 }
