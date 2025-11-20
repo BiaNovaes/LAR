@@ -4,7 +4,7 @@ export type QueroAjudar = {
     telefone: string;
     email: string;
     valor:string;
-    instituicao: string;
+    instituicaoid: string;
     cidade: string;
     estado: string;
 }

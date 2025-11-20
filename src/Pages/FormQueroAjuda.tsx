@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import style from "../Style/FormQueroAjudar.module.css";
 import type { PrecisoAjuda } from "../types/precisoAjuda";
 import { useEffect, useState, type ChangeEvent } from "react";
@@ -6,6 +5,7 @@ import { api } from "../Api/api";
 import BotaoSOS from "../Components/Botao/botao";
 import CabecalhoHome from "../Components/CabecalhoHome";
 import RodapeHome from "../Components/RodapeHome";
+import type { InstituicaoProps } from "../types/instituicao";
 
 function FormQueroAjuda() {
 
@@ -17,6 +17,7 @@ function FormQueroAjuda() {
   const [telefone, setTelefone] = useState('');
   const [email, setEmail] = useState('');
   const [assunto, setAssunto] = useState('');
+  const [Instituicao_lista, setInstituicao_lista] = useState<InstituicaoProps[]>([]);
   const [instituicao, setInstituicao] = useState('');
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
@@ -61,8 +62,9 @@ function FormQueroAjuda() {
     setAssunto(e.target.value)
   }
 
-  const handleInstituicaoChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setInstituicao(e.target.value)
+  const handleInstituicaoChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setInstituicao(e.target.value) 
+    alert(instituicao);
   }
 
   const handleCidadeChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -151,11 +153,17 @@ function FormQueroAjuda() {
     }
   }
 
+async function listaInstituicoes() {
+    const instituicoes = await api.listarInstituicao();
+    setInstituicao_lista(instituicoes);
+  }
+
   useEffect(() => {
     // carregarFormulario();
+    listaInstituicoes();
   }, []);
 
-
+  
 
   return (
     <div className={style.body}>
@@ -214,12 +222,14 @@ function FormQueroAjuda() {
                 <input type="text" onChange={handleAssuntoChange} placeholder="Digite a doença" />
               </div>
             </div>
-            <div className={style.linhaInputs}>
-              <div>
-                <label>Instituição</label>
-                <input type="text" onChange={handleInstituicaoChange} placeholder="Qual instituição" />
-              </div>
-            </div>
+              <select className={style.linhaInputs} onChange={handleInstituicaoChange} >
+                <p>Instituição</p>
+                {Instituicao_lista.map((id, index) => (
+                  <option key={index} value={`${id.ID}`}>{id.EMPRESA}</option>
+                )
+                )}
+
+              </select>
             <div className={style.linhaInputs}>
               <div>
                 <label>Cidade</label>
