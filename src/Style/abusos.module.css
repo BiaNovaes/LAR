@@ -13,7 +13,7 @@ html, body {
 /* PÁGINA INICIAL */
 .hero {
     height: 100vh;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     display: flex;
     flex-direction: column;
     justify-content: center;

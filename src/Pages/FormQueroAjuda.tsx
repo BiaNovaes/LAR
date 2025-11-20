@@ -138,11 +138,34 @@ function FormQueroAjuda() {
     setAbusoMoral(e.target.checked)
   }
 
+  // const AdicionarPost = async () => {
+  //   if (name && telefone && email && assunto && instituicao && cidade && estado) {
+  //     let json = await api.AdicionarFormularioPrecisoAjuda(name, telefone, email, assunto, instituicao, cidade, estado, tremor, cansaco,
+  //       desanimo, faltaAr, agonia, faltaFoco, alteracaoHumor, sensacaoDesconexao, preocupacaoPeso,
+  //       perdaInteresse, abusoPsicologico, abusoFisico, abusoSexual, abusoPatrimonial, abusoMoral);
+
+  //     if (json?.message === 'Formulario enviado com sucesso!') {
+  //       alert(json.message);
+  //       setPrecisoAjuda((PrecisoAjuda) => [...PrecisoAjuda, json]);
+  //     } else {
+  //       alert('Erro ao enviar formulario!');
+  //     }
+  //   }
+  // }
+
+  // O codigo de cima é o antigo deixei só para eu não se perder
+
   const AdicionarPost = async () => {
-    if (name && telefone && email && assunto && instituicao && cidade && estado) {
-      let json = await api.AdicionarFormularioPrecisoAjuda(name, telefone, email, assunto, instituicao, cidade, estado, tremor, cansaco,
-        desanimo, faltaAr, agonia, faltaFoco, alteracaoHumor, sensacaoDesconexao, preocupacaoPeso,
-        perdaInteresse, abusoPsicologico, abusoFisico, abusoSexual, abusoPatrimonial, abusoMoral);
+        if (name && telefone && email && assunto && instituicao && cidade && estado) {
+            
+            try {
+                let json = await api.AdicionarFormularioPrecisoAjuda(
+                    name, telefone, email, assunto, instituicao, cidade, estado, 
+                    tremor, cansaco, desanimo, faltaAr, agonia, faltaFoco, 
+                    alteracaoHumor, sensacaoDesconexao, preocupacaoPeso, 
+                    perdaInteresse, abusoPsicologico, abusoFisico, abusoSexual, 
+                    abusoPatrimonial, abusoMoral
+                );
 
       if (json?.message === 'Formulario enviado com sucesso!') {
         alert(json.message);
@@ -178,7 +201,6 @@ async function listaInstituicoes() {
             <div className={style.alertEmergency}>
               <strong> Em caso de emergência</strong>
               <p>
-                Em caso de emergência
                 Se você está em perigo imediato ou tendo pensamentos suicidas, ligue para os serviços de emergência.</p>
             </div>
 
