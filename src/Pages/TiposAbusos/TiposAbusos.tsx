@@ -14,6 +14,7 @@ import AcordeaoAbusos5 from '../../Components/Acordeao/acordeaoViolenciaMoral';
 import { Link } from 'react-router-dom';
 import Cabecalho from '../../Components/Cabecalho';
 import RodapeHome from '../../Components/RodapeHome';
+import BotaoVoltar from './BotaoVoltar/BotaoVoltar';
 
 
 
@@ -23,8 +24,10 @@ function TiposDeAbuso() {
 
 
   return (
+    <>
+    <Cabecalho />
     <div className={style.TiposDeAbusoContainer} id='TiposAbusos'>
-      <Cabecalho />
+      
       <header className={style.hero}>
 
 
@@ -187,11 +190,11 @@ function TiposDeAbuso() {
 
       </div>
 
-
+      <BotaoVoltar/>
       <RodapeHome />
 
     </div>
-
+</>
   );
 }
 

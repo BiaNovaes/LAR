@@ -170,7 +170,6 @@ function FormQueroAjuda() {
             <div className={style.alertEmergency}>
               <strong> Em caso de emergência</strong>
               <p>
-                Em caso de emergência
                 Se você está em perigo imediato ou tendo pensamentos suicidas, ligue para os serviços de emergência.</p>
             </div>
 

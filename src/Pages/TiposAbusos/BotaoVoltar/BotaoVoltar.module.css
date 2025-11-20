@@ -1,0 +1,26 @@
+.btoVoltar {
+  position: fixed;
+  right: 1740px;
+  top: 94%;
+  background-color: #eb9e5f;
+  color: #000000;
+  font-weight: bold;
+  border-radius: 25px;
+  width: 146px;
+  height: 45px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  transition: 0.2s ease;
+  text-decoration: none;
+  display: flex;              
+  align-items: center;       
+  justify-content: center;   
+}
+
+
+.p {
+  margin-top: 13px;
+  font-size:16px;
+  text-align: center;
+}
