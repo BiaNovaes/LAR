@@ -1,6 +1,7 @@
 import style from "../Style/saulo.module.css";
 import CabecalhoHome from "../Components/CabecalhoHome";
 import RodapeHome from "../Components/RodapeHome";
+import { Link } from "react-router-dom";
 
 
 const cards = [
@@ -75,7 +76,7 @@ function InstituicaoAjuda() {
                 Clique no botão abaixo para encontrar recursos e apoio relacionados a {card.titulo}.
                  <br />
               </p>
-              <button className={style.cardBtn} style={{ background: card.corBtn }}> Preciso de Ajuda </button>
+              <Link to='/precisodeajuda' className={style.cardBtn} style={{ background: card.corBtn }}> Preciso de Ajuda </Link>
             </div>
           ))}
         </div>

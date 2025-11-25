@@ -49,7 +49,7 @@ function Cabecalho() {
                         Doações
                     </NavLink>
 
-                    <NavLink to="/precisodeajuda" className={linkClass}>
+                    <NavLink to="/instituicao-ajuda" className={linkClass}>
                         Preciso de Ajuda
                     </NavLink>
 
