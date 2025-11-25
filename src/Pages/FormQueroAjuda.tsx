@@ -64,7 +64,7 @@ function FormQueroAjuda() {
 
   const handleInstituicaoChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setInstituicao(e.target.value) 
-    alert(instituicao);
+    // alert(instituicao);
   }
 
   const handleCidadeChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -139,8 +139,8 @@ function FormQueroAjuda() {
   }
 
   const AdicionarPost = async () => {
-    if (name && telefone && email && assunto && instituicao && cidade && estado) {
-      let json = await api.AdicionarFormularioPrecisoAjuda(name, telefone, email, assunto, instituicao, cidade, estado, tremor, cansaco,
+    if (name && telefone && email && assunto && cidade && estado) {
+      let json = await api.AdicionarFormularioPrecisoAjuda(name, telefone, email, assunto, instituicao ,cidade, estado, tremor, cansaco,
         desanimo, faltaAr, agonia, faltaFoco, alteracaoHumor, sensacaoDesconexao, preocupacaoPeso,
         perdaInteresse, abusoPsicologico, abusoFisico, abusoSexual, abusoPatrimonial, abusoMoral);
 

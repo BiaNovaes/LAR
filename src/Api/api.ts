@@ -67,7 +67,7 @@ export const api = {
         return json;
     },
 
-    AdicionarFormularioPrecisoAjuda: async (name: string, telefone: string, email: string, assunto: string, instituicao_id: string, cidade: string, estado: string, 
+    AdicionarFormularioPrecisoAjuda: async (name: string, telefone: string, email: string, assunto: string, instituicao_id: string ,cidade: string, estado: string, 
                                             tremor: boolean, cansaco: boolean, desanimo: boolean, faltaAr: boolean, agonia: boolean, faltaFoco: boolean, alteracaoHumor: boolean,
                                             sensacaoConexao: boolean, preocupacaoPeso: boolean, perdaInteresse: boolean, abusoPsicologico: boolean, abusoFisico: boolean,
                                             abusoSexual: boolean, abusoPatrimonial: boolean, abusoMoral: boolean) => {
@@ -78,7 +78,7 @@ export const api = {
                 TELEFONE: telefone,
                 EMAIL: email,
                 ASSUNTO: assunto,
-                ID: instituicao_id,
+                INSTITUTION_ID: instituicao_id,
                 CIDADE: cidade,
                 ESTADO: estado,
                 TREMOR: tremor,
