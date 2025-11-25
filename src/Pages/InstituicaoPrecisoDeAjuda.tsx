@@ -1,10 +1,6 @@
 import style from "../Style/saulo.module.css";
-import avatar from '../assets/icons/Generic-avatar.svg'
-import coracao from '../assets/icons/coracao.svg'
-import Alertatriangulo from '../assets/icons/Alertatriangulo.svg'
-import casa from '../assets/icons/casa.svg'
-import circulo from '../assets/icons/left-circle.svg'
-import logo from '../assets/imagens/logoSemFundo.png'
+import CabecalhoHome from "../Components/CabecalhoHome";
+import RodapeHome from "../Components/RodapeHome";
 
 
 const cards = [
@@ -55,45 +51,9 @@ const cards = [
 function InstituicaoAjuda() {
   return (
 
-    <div className={style.container_cabecalho}>
-
-      <aside className={style.sidebar}>
-
-        <div className={style.logo_container}>
-          <img className={style.logo} src={logo} alt="Logo LAR" />
-          <div>
-            <h1 className={style.logo_title}>LAR</h1>
-            <p className={style.text_logo}>Lugar de Apoio e Recomeço</p>
-          </div>
-        </div>
-
-        <nav className={style.menu}>
-          <div className={style.menu_filho}>
-            <div className={style.avatar}>
-              <img src={avatar} alt="avatar-login" />
-              <a href="/login">Login</a><br />
-            </div>
-
-            <div className={style.avatar}>
-              <img src={coracao} alt="coracao" />
-              <a href="instituicao-ajuda" >Preciso de ajuda</a>
-            </div>
-            <div className={style.avatar}>
-              <img src={casa} alt="casa" />
-              <a href="/instituicao">Instituições</a>
-            </div>
-            <div className={style.avatar}>
-              <img src={Alertatriangulo} alt="triangulo" />
-              <a href="/sos">S.O.S</a>
-            </div>
-          </div>
-
-          <div className={style.avatar_circulo}>
-            <img src={circulo} alt="seta-esquerda" />
-            <a href="/">Pagina Inicial</a>
-          </div>
-        </nav>
-      </aside>
+    <div className={style.body}>
+      <CabecalhoHome />
+      
 
     <div className={style.instituicaoContainer}>
       
@@ -121,6 +81,7 @@ function InstituicaoAjuda() {
         </div>
       </main>
     </div>
+    <RodapeHome />
     </div>
   );
 }
