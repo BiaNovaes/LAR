@@ -47,7 +47,7 @@ export const api = {
         }
     },
 
-    AdicionarFormulario: async (name: string, telefone: string, email: string, valor:string, instituicao: string,cidade: string, estado: string) => {
+    AdicionarFormulario: async (name: string, telefone: string, email: string, valor:string, instituicao_id: string,cidade: string, estado: string) => {
         let response = await fetch('http://localhost:3000/FormularioQueroAjudar/', {
             method: 'POST',
             body: JSON.stringify({
@@ -55,7 +55,7 @@ export const api = {
                 TELEFONE: telefone,
                 EMAIL: email,
                 VALOR: valor,
-                INSTITUICAO: instituicao,
+                INSTITUTION_ID: instituicao_id,
                 CIDADE: cidade,
                 ESTADO: estado
             }),

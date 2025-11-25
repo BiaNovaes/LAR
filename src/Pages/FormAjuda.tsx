@@ -1,14 +1,12 @@
 import { useState } from "react";
 import style from "../Style/FormPrecisoAjuda.module.css";
-import ilustracao from "../assets/imagens/Formulario.jpg";
-import { Link } from "react-router-dom";
 import type { QueroAjudar } from "../types/queroAjudar";
 import { useEffect, type ChangeEvent } from "react";
 import { api } from "../Api/api";
 import BotaoSOS from "../Components/Botao/botao";
-import Cabecalho from "../Components/Cabecalho";
 import CabecalhoHome from "../Components/CabecalhoHome";
 import RodapeHome from "../Components/RodapeHome";
+import type { InstituicaoProps } from "../types/instituicao";
 
 
 function FormAjuda() {
@@ -21,6 +19,7 @@ function FormAjuda() {
   const [telefone, setTelefone] = useState('');
   const [email, setEmail] = useState('');
   const [valor, setValor] = useState('');
+  const [Instituicao_lista, setInstituicao_lista] = useState<InstituicaoProps[]>([]);
   const [instituicao, setInstituicao] = useState('');
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
@@ -45,8 +44,8 @@ function FormAjuda() {
     setValor(e.target.value)
   }
 
-  const handleInstituicaoChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setInstituicao(e.target.value)
+  const handleInstituicaoChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setInstituicao(e.target.value) 
   }
 
   const handleCidadeChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -61,7 +60,7 @@ function FormAjuda() {
 
 
   const AdicionarPost = async () => {
-    if (name && telefone && email && valor && instituicao && cidade && estado) {
+    if (name && telefone && email && valor && cidade && estado) {
       let json = await api.AdicionarFormulario(name, telefone, email, valor, instituicao, cidade, estado);
       if (json?.message === 'Formulario enviado com sucesso!') {
         alert(json.message);
@@ -72,8 +71,15 @@ function FormAjuda() {
     }
   }
 
+async function listaInstituicoes() {
+    const instituicoes = await api.listarInstituicao();
+    setInstituicao_lista(instituicoes);
+  }
+
+
   useEffect(() => {
     // carregarFormulario();
+    listaInstituicoes();
   }, []);
 
 
@@ -126,12 +132,14 @@ function FormAjuda() {
                 <input type="email" onChange={handleEmailChange} placeholder="Digite seu Email" />
               </div>
             </div>
-            <div className={style.linhaInputs}>
-              <div>
-                <label>Instituição</label>
-                <input type="text" onChange={handleInstituicaoChange} placeholder="Qual Instituição" />
-              </div>
-            </div>
+            <select className={style.linhaInputs} onChange={handleInstituicaoChange} >
+                <p>Instituição</p>
+                {Instituicao_lista.map((id, index) => (
+                  <option key={index} value={`${id.ID}`}>{id.EMPRESA}</option>
+                )
+                )}
+
+              </select>
             <div className={style.linhaInputs}>
               <div>
                 <label>Valor</label>
