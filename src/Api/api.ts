@@ -8,7 +8,8 @@ export const api = {
                     method: 'POST',
                     body: JSON.stringify
                         ({
-                            email, senha: password
+                            EMAIL:email,
+                             PASSWORD:password
                         }),
                     headers: {
                         'Content-Type': 'application/json; charset=utf-8'

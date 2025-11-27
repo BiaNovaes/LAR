@@ -2,7 +2,7 @@ import Cabecalho from "../../Components/Cabecalho";
 // import Rodape from "../../Components/Rodape";
 import { useEffect, useState, type ChangeEvent } from "react";
 import style from "./styles.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { api } from "../../Api/api";
 
 function Login() {
@@ -10,6 +10,7 @@ function Login() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const navigate= useNavigate();
   
   const handleName = (e: ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value)
