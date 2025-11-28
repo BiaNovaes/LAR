@@ -57,7 +57,17 @@ const listaInstituicoes = [
         local: ["São Paulo", "Porto Alegre"],
         descricao: "Atendimento especializado para transtornos de ansiedade generalizada, pânico e fobias.",
         site: "https://www.clinicaansiedade.com.br/"
-    }
+    },
+     {
+        id: 7,
+        nome: "Ame sua mente",
+        tags: ["Depressão","Ansiedade"],
+        tipo: "Online",
+        local: ["Nacional"],
+        descricao: "O Instituto é uma Organização da Sociedade Civil que desenvolve projetos pautados em pesquisas científicas com foco na promoção da saúde mental, redução de estigmas, prevenção e manejo de transtornos.",
+        site: "https://www.clinicaansiedade.com.br/"
+    },
+    
 ];
 
 function Instituicao() {
