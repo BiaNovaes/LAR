@@ -1,6 +1,6 @@
 import AutoCuidado from "../Components/AutoCuidado/AutoCuidado";
 import BotaoSOS from "../Components/Botao/botao";
-import Cabecalho from "../Components/Cabecalho";
+import CabecalhoHome from "../Components/CabecalhoHome";
 import MenuCards from "../Components/MenuCards";
 import RodapeHome from "../Components/RodapeHome";
 
@@ -8,7 +8,7 @@ import RodapeHome from "../Components/RodapeHome";
 function SaudeMental() {
     return (
         <div>
-            <Cabecalho />
+            <CabecalhoHome />
             <MenuCards />
             <AutoCuidado />
             <BotaoSOS />
