@@ -376,3 +376,19 @@
         
     }
 }
+
+
+.linhaInputs1 {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+.linhaInputs1:focus {
+  border-color: #999;
+}
