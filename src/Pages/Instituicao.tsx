@@ -65,7 +65,7 @@ const listaInstituicoes = [
         tipo: "Online",
         local: ["Nacional"],
         descricao: "O Instituto é uma Organização da Sociedade Civil que desenvolve projetos pautados em pesquisas científicas com foco na promoção da saúde mental, redução de estigmas, prevenção e manejo de transtornos.",
-        site: "https://www.clinicaansiedade.com.br/"
+        site: "https://www.amesuamente.org.br/  "
     },
     
 ];
