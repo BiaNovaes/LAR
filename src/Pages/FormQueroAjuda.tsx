@@ -273,14 +273,16 @@ async function listaInstituicoes() {
                 <input type="text" onChange={handleAssuntoChange} placeholder="Digite a doença" />
               </div>
             </div>
+            <div>
+              <label>Instituição</label>
               <select className={style.linhaInputs} onChange={handleInstituicaoChange} >
-                <p>Instituição</p>
                 {Instituicao_lista.map((id, index) => (
                   <option key={index} value={`${id.ID}`}>{id.EMPRESA}</option>
                 )
                 )}
 
               </select>
+            </div>
             <div className={style.linhaInputs}>
               <div>
                 <label>Cidade</label>

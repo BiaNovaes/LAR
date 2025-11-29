@@ -132,14 +132,15 @@ async function listaInstituicoes() {
                 <input type="email" onChange={handleEmailChange} placeholder="Digite seu Email" />
               </div>
             </div>
+            <div>
+            <label>Instituição</label>
             <select className={style.linhaInputs} onChange={handleInstituicaoChange} >
-                <p>Instituição</p>
                 {Instituicao_lista.map((id, index) => (
                   <option key={index} value={`${id.ID}`}>{id.EMPRESA}</option>
                 )
-                )}
-
-              </select>
+              )}
+            </select>
+            </div>
             <div className={style.linhaInputs}>
               <div>
                 <label>Valor</label>
