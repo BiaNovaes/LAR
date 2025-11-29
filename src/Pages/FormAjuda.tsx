@@ -45,7 +45,7 @@ function FormAjuda() {
   }
 
   const handleInstituicaoChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setInstituicao(e.target.value) 
+    setInstituicao(e.target.value)
   }
 
   const handleCidadeChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -71,7 +71,7 @@ function FormAjuda() {
     }
   }
 
-async function listaInstituicoes() {
+  async function listaInstituicoes() {
     const instituicoes = await api.listarInstituicao();
     setInstituicao_lista(instituicoes);
   }
@@ -132,14 +132,22 @@ async function listaInstituicoes() {
                 <input type="email" onChange={handleEmailChange} placeholder="Digite seu Email" />
               </div>
             </div>
-            <select className={style.linhaInputs} onChange={handleInstituicaoChange} >
-                <p>Instituição</p>
-                {Instituicao_lista.map((id, index) => (
-                  <option key={index} value={`${id.ID}`}>{id.EMPRESA}</option>
-                )
-                )}
 
-              </select>
+            <div className={style.linhaInputs}>
+              <div>
+                <label>Instituição</label>
+
+                <select onChange={handleInstituicaoChange} >
+
+                  {Instituicao_lista.map((id, index) => (
+                    <option key={index} value={`${id.ID}`}>{id.EMPRESA}</option>
+                  )
+                  )}
+
+                </select>
+              </div>
+            </div>
+
             <div className={style.linhaInputs}>
               <div>
                 <label>Valor</label>
@@ -167,7 +175,7 @@ async function listaInstituicoes() {
         </div>
         <BotaoSOS />
       </div>
-      <RodapeHome/>
+      <RodapeHome />
     </div>
   );
 }

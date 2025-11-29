@@ -63,7 +63,7 @@ function FormQueroAjuda() {
   }
 
   const handleInstituicaoChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setInstituicao(e.target.value) 
+    setInstituicao(e.target.value)
     // alert(instituicao);
   }
 
@@ -140,7 +140,7 @@ function FormQueroAjuda() {
 
   const AdicionarPost = async () => {
     if (name && telefone && email && assunto && cidade && estado) {
-      let json = await api.AdicionarFormularioPrecisoAjuda(name, telefone, email, assunto, instituicao ,cidade, estado, tremor, cansaco,
+      let json = await api.AdicionarFormularioPrecisoAjuda(name, telefone, email, assunto, instituicao, cidade, estado, tremor, cansaco,
         desanimo, faltaAr, agonia, faltaFoco, alteracaoHumor, sensacaoDesconexao, preocupacaoPeso,
         perdaInteresse, abusoPsicologico, abusoFisico, abusoSexual, abusoPatrimonial, abusoMoral);
 
@@ -157,7 +157,7 @@ function FormQueroAjuda() {
 
   // const AdicionarPost = async () => {
   //       if (name && telefone && email && assunto && instituicao && cidade && estado) {
-            
+
   //           try {
   //               let json = await api.AdicionarFormularioPrecisoAjuda(
   //                   name, telefone, email, assunto, instituicao, cidade, estado, 
@@ -168,7 +168,7 @@ function FormQueroAjuda() {
   //               );
 
   //               if (json?.message === 'Formulario enviado com sucesso!') {
-                    
+
   //                   alert(json.message);
 
   //                   setPrecisoAjuda((PrecisoAjuda) => [...PrecisoAjuda, json]);
@@ -205,7 +205,7 @@ function FormQueroAjuda() {
   //       }
   //   }
 
-async function listaInstituicoes() {
+  async function listaInstituicoes() {
     const instituicoes = await api.listarInstituicao();
     setInstituicao_lista(instituicoes);
   }
@@ -215,7 +215,7 @@ async function listaInstituicoes() {
     listaInstituicoes();
   }, []);
 
-  
+
 
   return (
     <div className={style.body}>
@@ -273,14 +273,22 @@ async function listaInstituicoes() {
                 <input type="text" onChange={handleAssuntoChange} placeholder="Digite a doença" />
               </div>
             </div>
-              <select className={style.linhaInputs} onChange={handleInstituicaoChange} >
-                <p>Instituição</p>
-                {Instituicao_lista.map((id, index) => (
-                  <option key={index} value={`${id.ID}`}>{id.EMPRESA}</option>
-                )
-                )}
 
-              </select>
+            <div className={style.linhaInputs}>
+              <div>
+                <label>Instituição</label>
+
+                <select onChange={handleInstituicaoChange} >
+
+                  {Instituicao_lista.map((id, index) => (
+                    <option key={index} value={`${id.ID}`}>{id.EMPRESA}</option>
+                  )
+                  )}
+
+                </select>
+              </div>
+            </div>
+
             <div className={style.linhaInputs}>
               <div>
                 <label>Cidade</label>

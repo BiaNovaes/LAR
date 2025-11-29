@@ -95,15 +95,17 @@ label {
     font-weight: 600;
 }
 
-input {
-    padding: 12px;
+
+input, select {
+    padding: 8px;
     border-radius: 8px;
     background: #ffffff;
     border: 1px solid #ddd;
     outline: none;
+    width: 100%;
 }
 
-input:focus {
+input:focus, select:focus {
     border-color: #8ab9ff;
 }
 
