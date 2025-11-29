@@ -14,7 +14,12 @@ import AcordeaoAbusos5 from '../../Components/Acordeao/acordeaoViolenciaMoral';
 import { Link } from 'react-router-dom';
 import RodapeHome from '../../Components/RodapeHome';
 import BotaoVoltar from './BotaoVoltar/BotaoVoltar';
+<<<<<<< HEAD
 import CabecalhoHome from '../../Components/CabecalhoHome';
+=======
+import BotaoSOS from '../../Components/Botao/botao';
+import { HashLink } from 'react-router-hash-link';
+>>>>>>> 25d3b404ad69bd18ec895f0a7168109e29760400
 
 
 
@@ -47,7 +52,14 @@ function TiposDeAbuso() {
 
           {/* <div className={style.arrowdown}></div> */}
 
+<<<<<<< HEAD
           <div className={style.flecha}>&#8744;</div>
+=======
+
+        <HashLink smooth to='/TiposAbusos#VFisica' className={style.flecha}>&#8744; </HashLink>
+
+  
+>>>>>>> 25d3b404ad69bd18ec895f0a7168109e29760400
 
         </header>
 
@@ -194,7 +206,41 @@ function TiposDeAbuso() {
         <RodapeHome />
 
       </div>
+<<<<<<< HEAD
     </>
+=======
+
+
+      <div className={style.conteudo6} id='VDomestica'>
+
+
+
+        <div className={style.secaoAbusos6}>
+
+          <h1>Violência Domestica </h1>
+
+
+          <p>De acordo com o art. 5º da Lei Maria da Penha, violência doméstica e familiar contra a mulher é “qualquer ação <br /> ou omissão baseada no gênero que lhe cause morte, lesão, sofrimento físico, sexual ou psicológico e dano moral <br /> ou patrimonial”. <br />
+            Quando a vítima silencia diante da violência, o agressor não se sente responsabilizado pelos seus atos - isso sem <br /> contar o fato de que a sociedade, em suas diversas práticas, reforça a cultura patriarcal e machista, o que <br /> dificulta a percepção da mulher de que está vivenciando o ciclo da violência. <br />
+            Com o tempo, os intervalos entre uma fase e outra ficam menores, e as agressões passam a acontecer sem <br /> obedecer à ordem das fases. Em alguns casos, o ciclo da violência termina com o feminicídio, que é o assassinato <br /> da vítima.<br /><br />
+
+            Não se cale, <b>denuncie</b>.</p>
+
+          <Link to={'/sos'} className={style.btoSOS}>S.O.S</Link>
+        </div>
+
+        <img src={ImgViolenciaDomestica} className={style.ImgViolenciaDomestica} />
+
+
+      </div>
+
+      <BotaoVoltar/>
+      <BotaoSOS />
+      <RodapeHome />
+
+    </div>
+</>
+>>>>>>> 25d3b404ad69bd18ec895f0a7168109e29760400
   );
 }
 
