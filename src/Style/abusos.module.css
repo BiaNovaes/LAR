@@ -59,6 +59,8 @@ z-index: 1; /*Para deixar a imagem atras*/
   font-size: 48px;
   cursor: pointer;  /* Mostra uma mão quando coloca o mouse em cima */
   animation: bounce 1.5s infinite;
+  text-decoration: none;
+  color: #000000;
   
 }
 

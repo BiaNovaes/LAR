@@ -15,6 +15,8 @@ import { Link } from 'react-router-dom';
 import Cabecalho from '../../Components/Cabecalho';
 import RodapeHome from '../../Components/RodapeHome';
 import BotaoVoltar from './BotaoVoltar/BotaoVoltar';
+import BotaoSOS from '../../Components/Botao/botao';
+import { HashLink } from 'react-router-hash-link';
 
 
 
@@ -47,7 +49,10 @@ function TiposDeAbuso() {
 
         {/* <div className={style.arrowdown}></div> */}
 
-        <div className={style.flecha}>&#8744;</div>
+
+        <HashLink smooth to='/TiposAbusos#VFisica' className={style.flecha}>&#8744; </HashLink>
+
+  
 
       </header>
 
@@ -191,6 +196,7 @@ function TiposDeAbuso() {
       </div>
 
       <BotaoVoltar/>
+      <BotaoSOS />
       <RodapeHome />
 
     </div>
