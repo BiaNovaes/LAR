@@ -1,7 +1,7 @@
 import style from './../Style/milton.module.css'
-import { useState } from 'react'
 import CabecalhoHome from '../Components/CabecalhoHome'
 import RodapeHome from '../Components/RodapeHome'
+import { useState } from 'react';
 
 const listaInstituicoes = [
     {
@@ -211,7 +211,7 @@ function Instituicao() {
             </div>
             <RodapeHome />
         </>
-    )
+    );
 }
 
 export default Instituicao

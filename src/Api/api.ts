@@ -1,15 +1,17 @@
 export const api = {
 
     Logar: async (email: string, password: String) => {
+
+        console.log(email,password)
         {
 
-            let response = await fetch('http://localhost:3000/users/login',
+            let response = await fetch('https://lar-backend.onrender.com/users/login',
                 {
                     method: 'POST',
                     body: JSON.stringify
                         ({
                             EMAIL:email,
-                             PASSWORD:password
+                            PASSWORD:password
                         }),
                     headers: {
                         'Content-Type': 'application/json; charset=utf-8'
@@ -28,12 +30,12 @@ export const api = {
     Cadastro: async (name: string, email: string, password: String) => {
         {
 
-            let response = await fetch('http://localhost:3000/create',
+            let response = await fetch('https://lar-backend.onrender.com/users/sign-up',
                 {
                     method: 'POST',
                     body: JSON.stringify
                         ({
-                            name, email, senha: password
+                            NOME:name, EMAIL:email, PASSWORD: password
                         }),
                     headers: {
                         'Content-Type': 'application/json; charset=utf-8'
@@ -49,7 +51,7 @@ export const api = {
     },
 
     AdicionarFormulario: async (name: string, telefone: string, email: string, valor:string, instituicao_id: string,cidade: string, estado: string) => {
-        let response = await fetch('http://localhost:3000/FormularioQueroAjudar/', {
+        let response = await fetch('https://lar-backend.onrender.com/FormularioQueroAjudar/', {
             method: 'POST',
             body: JSON.stringify({
                 NAME: name,
@@ -72,7 +74,7 @@ export const api = {
                                             tremor: boolean, cansaco: boolean, desanimo: boolean, faltaAr: boolean, agonia: boolean, faltaFoco: boolean, alteracaoHumor: boolean,
                                             sensacaoConexao: boolean, preocupacaoPeso: boolean, perdaInteresse: boolean, abusoPsicologico: boolean, abusoFisico: boolean,
                                             abusoSexual: boolean, abusoPatrimonial: boolean, abusoMoral: boolean) => {
-        let response = await fetch('http://localhost:3000/FormularioPrecisoAjuda/', {
+        let response = await fetch('https://lar-backend.onrender.com/FormularioPrecisoAjuda/', {
             method: 'POST',
             body: JSON.stringify({
                 NAME: name,
@@ -107,7 +109,7 @@ export const api = {
     },
 
     AdicionarFaleConosco: async (name: string, telefone: string, email:string, endereco: string, assunto: string, mensagem:string) => {
-        let response = await fetch('http://localhost:3000/FormularioFaleConosco/', {
+        let response = await fetch('https://lar-backend.onrender.com/FormularioFaleConosco/', {
             method: 'POST',
             body: JSON.stringify({
                 NAME: name,
@@ -126,7 +128,7 @@ export const api = {
     },
 
     listarInstituicao: async () => {
-        let response = await fetch('http://localhost:3000/institution/get-all', {
+        let response = await fetch('https://lar-backend.onrender.com/institution/get-all', {
             method: 'GET',
             headers: {
                 'Content-type' : 'application/json'

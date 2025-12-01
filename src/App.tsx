@@ -14,24 +14,29 @@ import InstituicaoAjuda from "./Pages/InstituicaoPrecisoDeAjuda.tsx";
 import FaleConosco from "./Pages/FaleConosco.tsx";
 import BotaoSOS from "./Components/Botao/botao.tsx";
 import SaudeMental from "./Pages/SaudeMental.tsx";
+import { UsuarioLogadoProvider } from "./contexts/contextAuth.tsx";
 
 function App() {
   return (
-    <Routes>
-      <Route path="*" element={<NotFound />} />
-      <Route path="/" element={<Home />} />
-      <Route path="/sos" element={<Sos />} />
-      <Route path="/esqueci-senha" element={<EsqueciSenha />} />
-      <Route path="/resetar-senha" element={<ResetarSenha />} />
-      <Route path="/queroajudar" element={<FormAjuda />} />
-      <Route path="/precisodeajuda" element={<FormQueroAjuda />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/TiposAbusos" element={<TiposDeAbuso />} />
-      <Route path="/instituicao" element={<Instituicao />} />
-      <Route path="/instituicao-ajuda" element={<InstituicaoAjuda />} />
-      <Route path="/faleConosco" element={<FaleConosco/>}/>
-      <Route path="/SaudeMental" element={<SaudeMental/>}/>
-    </Routes>
+
+
+    <UsuarioLogadoProvider>
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/sos" element={<Sos />} />
+        <Route path="/esqueci-senha" element={<EsqueciSenha />} />
+        <Route path="/resetar-senha" element={<ResetarSenha />} />
+        <Route path="/queroajudar" element={<FormAjuda />} />
+        <Route path="/precisodeajuda" element={<FormQueroAjuda />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/TiposAbusos" element={<TiposDeAbuso />} />
+        <Route path="/instituicao" element={<Instituicao />} />
+        <Route path="/instituicao-ajuda" element={<InstituicaoAjuda />} />
+        <Route path="/faleConosco" element={<FaleConosco />} />
+        <Route path="/SaudeMental" element={<SaudeMental />} />
+      </Routes>
+    </UsuarioLogadoProvider>
   );
 }
 
