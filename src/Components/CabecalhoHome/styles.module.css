@@ -186,3 +186,9 @@
     transition: 0.2s ease;
     margin-left: 10px;
 }
+
+.logoutBto:hover{
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+  font-weight: normal;
+}

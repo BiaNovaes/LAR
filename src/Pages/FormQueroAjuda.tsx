@@ -6,6 +6,7 @@ import BotaoSOS from "../Components/Botao/botao";
 import CabecalhoHome from "../Components/CabecalhoHome";
 import RodapeHome from "../Components/RodapeHome";
 import type { InstituicaoProps } from "../types/instituicao";
+import emailjs from '@emailjs/browser';
 
 function FormQueroAjuda() {
 
@@ -138,72 +139,72 @@ function FormQueroAjuda() {
     setAbusoMoral(e.target.checked)
   }
 
-  const AdicionarPost = async () => {
-    if (name && telefone && email && assunto && cidade && estado) {
-      let json = await api.AdicionarFormularioPrecisoAjuda(name, telefone, email, assunto, instituicao, cidade, estado, tremor, cansaco,
-        desanimo, faltaAr, agonia, faltaFoco, alteracaoHumor, sensacaoDesconexao, preocupacaoPeso,
-        perdaInteresse, abusoPsicologico, abusoFisico, abusoSexual, abusoPatrimonial, abusoMoral);
+  // const AdicionarPost = async () => {
+  //   if (name && telefone && email && assunto && cidade && estado) {
+  //     let json = await api.AdicionarFormularioPrecisoAjuda(name, telefone, email, assunto, instituicao, cidade, estado, tremor, cansaco,
+  //       desanimo, faltaAr, agonia, faltaFoco, alteracaoHumor, sensacaoDesconexao, preocupacaoPeso,
+  //       perdaInteresse, abusoPsicologico, abusoFisico, abusoSexual, abusoPatrimonial, abusoMoral);
 
-      if (json?.message === 'Formulario enviado com sucesso!') {
-        alert(json.message);
-        setPrecisoAjuda((PrecisoAjuda) => [...PrecisoAjuda, json]);
-      } else {
-        alert('Erro ao enviar formulario!');
-      }
-    }
-  }
+  //     if (json?.message === 'Formulario enviado com sucesso!') {
+  //       alert(json.message);
+  //       setPrecisoAjuda((PrecisoAjuda) => [...PrecisoAjuda, json]);
+  //     } else {
+  //       alert('Erro ao enviar formulario!');
+  //     }
+  //   }
+  // }
 
   // O codigo de cima é o antigo deixei só para eu não se perder
 
-  // const AdicionarPost = async () => {
-  //       if (name && telefone && email && assunto && instituicao && cidade && estado) {
+  const AdicionarPost = async () => {
+        if (name && telefone && email && assunto && cidade && instituicao && estado) {
 
-  //           try {
-  //               let json = await api.AdicionarFormularioPrecisoAjuda(
-  //                   name, telefone, email, assunto, instituicao, cidade, estado, 
-  //                   tremor, cansaco, desanimo, faltaAr, agonia, faltaFoco, 
-  //                   alteracaoHumor, sensacaoDesconexao, preocupacaoPeso, 
-  //                   perdaInteresse, abusoPsicologico, abusoFisico, abusoSexual, 
-  //                   abusoPatrimonial, abusoMoral
-  //               );
+            try {
+                let json = await api.AdicionarFormularioPrecisoAjuda(
+                    name, telefone, email, assunto, instituicao, cidade, estado, 
+                    tremor, cansaco, desanimo, faltaAr, agonia, faltaFoco, 
+                    alteracaoHumor, sensacaoDesconexao, preocupacaoPeso, 
+                    perdaInteresse, abusoPsicologico, abusoFisico, abusoSexual, 
+                    abusoPatrimonial, abusoMoral
+                );
 
-  //               if (json?.message === 'Formulario enviado com sucesso!') {
+                if (json?.message === 'Formulario enviado com sucesso!') {
 
-  //                   alert(json.message);
+                    alert(json.message);
 
-  //                   setPrecisoAjuda((PrecisoAjuda) => [...PrecisoAjuda, json]);
+                    setPrecisoAjuda((PrecisoAjuda) => [...PrecisoAjuda, json]);
 
-  //                   const templateParams = {
-  //                       user_name: name,
-  //                       user_email: email,
-  //                       user_assunto: assunto,
-  //                       message: "Recebemos seu pedido de ajuda. Nossa equipe entrará em contato."
-  //                   };
+                    const templateParams = {
+                        user_name: name,
+                        user_email: email,
+                        user_assunto: assunto,
+                        message: "Recebemos seu pedido de ajuda. Nossa equipe entrará em contato."
+                    };
 
-  //                   emailjs.send(
-  //                       "service_lar",   // ID do servidor (Google)
-  //                       "template_lar",  // ID do corpo do email
-  //                       templateParams,
-  //                       "4ooespBmTtVLo7LAa"   // PUBLIC KEY lá no site EmailJS
-  //                   )
-  //                   .then((response) => {
-  //                       console.log('EMAIL ENVIADO COM SUCESSO!', response.status, response.text);
-  //                   })
-  //                   .catch((err) => {
-  //                       console.log('ERRO NO EMAIL:', err);
-  //                   });
+                    emailjs.send(
+                        "service_lar",   // ID do servidor (Google)
+                        "template_lar",  // ID do corpo do email
+                        templateParams,
+                        "4ooespBmTtVLo7LAa"   // PUBLIC KEY lá no site EmailJS
+                    )
+                    .then((response) => {
+                        console.log('EMAIL ENVIADO COM SUCESSO!', response.status, response.text);
+                    })
+                    .catch((err) => {
+                        console.log('ERRO NO EMAIL:', err);
+                    });
 
-  //               } else {
-  //                   alert('Erro ao enviar formulario para o banco de dados!');
-  //               }
-  //           } catch (error) {
-  //               console.error("Erro na requisição:", error);
-  //               alert("Ocorreu um erro de conexão.");
-  //           }
-  //       } else {
-  //           alert("Por favor, preencha todos os campos obrigatórios.");
-  //       }
-  //   }
+                } else {
+                    alert('Erro ao enviar formulario para o banco de dados!');
+                }
+            } catch (error) {
+                console.error("Erro na requisição:", error);
+                alert("Ocorreu um erro de conexão.");
+            }
+        } else {
+            alert("Por favor, preencha todos os campos obrigatórios.");
+        }
+    }
 
   async function listaInstituicoes() {
     const instituicoes = await api.listarInstituicao();
@@ -274,21 +275,24 @@ function FormQueroAjuda() {
               </div>
             </div>
 
-            <div className={style.linhaInputs}>
+         <div className={style.linhaInputs}>
               <div>
                 <label>Instituição</label>
-
-                <select onChange={handleInstituicaoChange} >
-
-                  {Instituicao_lista.map((id, index) => (
-                    <option key={index} value={`${id.ID}`}>{id.EMPRESA}</option>
-                  )
-                  )}
-
+ 
+                <select onChange={handleInstituicaoChange} defaultValue="">
+                <option value="" disabled>
+                Selecione a instituição
+                </option>
+ 
+                {Instituicao_lista.map((id, index) => (
+                  <option key={index} value={id.ID}>
+                   {id.EMPRESA}
+                </option>
+              ))}
                 </select>
               </div>
             </div>
-
+            
             <div className={style.linhaInputs}>
               <div>
                 <label>Cidade</label>
