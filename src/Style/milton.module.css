@@ -193,6 +193,7 @@
     background: transparent;
     border: 2px solid #77b7d9;
     color: #77b7d9;
+    text-decoration: none;
 }
 
 .btnDoacao:hover { background: #eaf6fb; }

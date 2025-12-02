@@ -2,6 +2,7 @@ import style from './../Style/milton.module.css'
 import CabecalhoHome from '../Components/CabecalhoHome'
 import RodapeHome from '../Components/RodapeHome'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const listaInstituicoes = [
     {
@@ -194,7 +195,9 @@ function Instituicao() {
                                             >
                                                 Saiba Mais
                                             </a>
-                                            <div className={style.btnDoacao}>Fazer Doação</div>
+                                            <Link to="/queroajudar" className={style.btnDoacao}>
+                                                Fazer Doação
+                                            </Link>
                                         </div>
                                     </div>
                                 ))
