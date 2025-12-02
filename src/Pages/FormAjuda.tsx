@@ -133,17 +133,20 @@ function FormAjuda() {
               </div>
             </div>
 
-            <div className={style.linhaInputs}>
+          <div className={style.linhaInputs}>
               <div>
                 <label>Instituição</label>
-
-                <select onChange={handleInstituicaoChange} >
-
-                  {Instituicao_lista.map((id, index) => (
-                    <option key={index} value={`${id.ID}`}>{id.EMPRESA}</option>
-                  )
-                  )}
-
+ 
+                <select onChange={handleInstituicaoChange} defaultValue="">
+                <option value="" disabled>
+                Selecione a instituição
+                </option>
+ 
+                {Instituicao_lista.map((id, index) => (
+                  <option key={index} value={id.ID}>
+                   {id.EMPRESA}
+                </option>
+              ))}
                 </select>
               </div>
             </div>
